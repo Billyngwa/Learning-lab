@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/register.css">
+    <title>Sign in</title>
+</head>
+<body>
+    <form action="dashboard.html" method="post"> 
+        <div class="img">
+            <img src="../images/learning.png" alt="">
+        </div>
+        <h1>
+           Login to Learning Lab
+        </h1>
+        <div class="field-holder">
+            <label for="email">email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field-holder">   
+            <label for="password">password:</label>
+            <input type="password" id="password" name="password" required>
+
+        </div>
+        <div>
+            <button type="submit" class="login-button">Login</button>
+        </div>
+        <div class="donthaveaccount">
+            <p>Don't have an account? <a href="./register.html">Register</a></p>
+        </div>
+    </form>
+    <script>
+        const email= document.querySelector("#email");
+        const password= document.querySelector("#password");
+        const loginButton= document.querySelector(".login-button");
+
+        const userData= {
+            email:email.value,
+            password:password.value,
+        }
+        loginButton.addEventListener("click", (e) => {
+            e.preventDefault(); // Prevent form submission
+              const userData= {
+            email:email.value,
+            password:password.value,
+        }
+        if(!email.value || !password.value) {
+                alert("Please fill in all fields.");
+                return;
+            }
+            console.log("Login button clicked!");
+            console.log("User Data: ", userData);
+
+            alert("LOgin successful!");
+            location.href = "./dashboard.html";
+        });
+        console.log("data: ", userData);
+        
+    </script>
+</body>
+</html>

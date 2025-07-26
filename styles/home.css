@@ -44,10 +44,12 @@ header {
         justify-content: space-between;
         align-items: center;
         margin-top: 50px;
-        div.hero-image {
+
+        .hero-image {
             width: 50%;
             height: 500px;
         }
+
         div.hero-text {
             width: 50%;
             height: 500px;
@@ -58,7 +60,7 @@ header {
         }
     }
 }
-button{
+p.register{
     width: 200px;
     height: 50px;
     background-color: teal;

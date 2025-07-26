@@ -1,0 +1,47 @@
+--- index.html	2025-07-19 11:49:31.835325085 +0100
++++ README.md	2025-07-15 14:51:47.135451386 +0100
+@@ -1,41 +1,2 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-    <meta charset="UTF-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>Learning never ends with us</title>
+-    <link rel="stylesheet" href="./styles/home.css">
+-</head>
+-<body>
+-    <header>
+-        <nav>  
+-            <div class="logo">
+-                <p>
+-                    7KC
+-                </p>
+-            </div> 
+-            <ul>
+-                <li><a href="index.html">Home</a></li>
+-                <li><a href="./pages/about.html">About us</a></li>
+-                <li><a href="./pages/services.html">Services</a></li>
+-                <li><a href="./pages/contact.html">Contact</a></li>
+-                <li><a href="./pages/help.html">Help</a></li>
+-
+-            </ul>
+-        </nav>
+-        <section class="hero">
+-            <div class="hero-text">
+-                <h1>Learning never ends with us</h1>
+-                <p>We are here to help you learn and grow.</p>
+-                <p class="register">
+-                    <a href="./pages/register.html">Register</a>
+-                </span>
+-            </div>
+-            <div class="hero-image">
+-                <img src="./images/learning.png" alt="Hero Image">
+-                </div>
+-        </section>
+-    </header>
+-
+-</body>
+-</html>
+\ No newline at end of file
++# skc-level-3-4
++Teaching and understanding web pedagogy

@@ -1,0 +1,21 @@
+let serena = "Serena Williams";
+let worldGreeting = "Hello, World!";
+console.log(worldGreeting)
+
+function addNumbers(a, b) {
+    return a + b;
+}   
+
+function subtractNumbers(a, b) {
+    return a - b;
+}
+function multiplyNumbers(a, b) {
+    return a * b;
+}
+
+function divideNumbers(a, b) {
+    return a / b;
+}
+
+let sum = addNumbers(5,3)
+console.log("Sum:", sum);
