@@ -6,6 +6,15 @@ app.config["DEBUG"] = True
 def index():
     return '<h1>Good evening And welcome to my api!</h1>'
 
+
+#this code is for the user and is dynamic. I t will return the name of the user
+# when the user is called with the name in the url
+# for example: http://localhost:7000/user/John will return "Hello John!"
+# the name is passed as a parameter to the function
+# and is used to return a personalized message
+# the <name> part of the url is a variable that can be anything
+# the function will return a string with the name of the user
+# the @app.route decorator is used to define the route for the function
 @app.route("/user/<name>")
 def user(name):
     return f'<h1>Hello {name}!</h1>'
