@@ -67,3 +67,8 @@ h1{
     color: black;
     margin-top: 20px;
 }
+
+.field-holder{
+    display: flex;
+    justify-self: center;
+}
