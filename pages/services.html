@@ -1,11 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>services</title>
 </head>
+
 <body>
     <h1>Services</h1>
+    <select name="school" id="" class="select">
+
+        <option value="select" hidden>Select Section</option>
+        <option value="anglosaxon" class="optionValue">Anglosaxon</option>
+        <option value="francaise" class="optionValue">Francaise</option>
+    </select>
+    <select name="classes" id="" class="section-class">
+
+        <option value="select" hidden>Select class</option>
+        <option value="form 1" class="classValue">Form 1</option>
+        <option value="form 2" class="classValue">Form 2</option>
+        <option value="form3" class="classValue">Form 3</option>
+
+        <option value="form4" class="classValue">Form 4</option>
+        <option value="form5" class="classValue">Form 5</option>
+        <option value="l6" class="classValue">Lower sixth</option>
+        <option value="u6" class="classValue">Upper sixth</option>
+    </select>
+    <script>
+        const frenchArray = [
+            "6eme",
+            "5eme",
+            "4eme",
+            "3eme",
+            "2eme",
+            "1ere",
+            "Terminal"
+        ];
+        const englishArray = [
+            "Form 1",
+            "Form 2",
+            "Form 3",
+            "Form 4",
+            "Form 5",
+            "Lower Sixth",
+            "Upper Sixth"
+            ];
+        const selectElement = document.querySelector(".select");
+        let selectedSection = "";
+        if (selectElement) {
+            selectElement.addEventListener("click", (event) => {
+                const optionValues = document.getElementsByClassName("optionValue");
+                for (let i = 0; i < optionValues.length; i++) {
+                    if (optionValues[i].value === event.target.value) {
+
+                        selectedSection = optionValues[i].value;
+                    }
+                    console.log("Selected value:", selectedSection);
+                }
+                if (selectedSection === "francaise") {
+                    const allClasses = document.getElementsByClassName("classValue");
+                    if (allClasses) {
+                        for (let i = 0; i < allClasses.length; i++) {
+                            for (let i = 0; i < frenchArray.length; i++) {
+                                allClasses[i].value === frenchArray[i];
+                                allClasses[i].innerHTML = frenchArray[i];
+                            }
+
+                        }
+
+                    }
+                }
+
+                   if (selectedSection === "anglosaxon") {
+                    const allClasses = document.getElementsByClassName("classValue");
+                    if (allClasses) {
+                        for (let i = 0; i < allClasses.length; i++) {
+                            for (let i = 0; i < englishArray.length; i++) {
+                                allClasses[i].value === englishArray[i];
+                                allClasses[i].innerHTML = englishArray[i];
+                            }
+
+                        }
+
+                    }
+                }
+
+                event.preventDefault();
+            })
+
+        }
+    </script>
 </body>
+
 </html>

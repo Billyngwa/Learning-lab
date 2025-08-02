@@ -1,0 +1,43 @@
+.dashboard{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4f8; /* Light background */
+
+    main{
+        width: 30%;
+        background-color: white;
+        nav.sidebar{
+            background-color: #ffffff; /* White background for sidebar */
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+            border-radius: 8px; /* Rounded corners */
+            ul{
+                display: block;
+                li{
+                    a{
+                        display: block;
+                        padding: 10px;
+                        color: #333; /* Dark text color */
+                        text-decoration: none;
+                        font-weight: 500;
+                        border-radius: 4px; /* Rounded corners for links */
+                        transition: background-color 0.3s ease;
+
+                        &:hover{
+                            background-color: #e0f7fa; /* Light teal on hover */
+                            color: #00796b; /* Darker teal text on hover */
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .dashboard-content{
+        width: 70%;
+        padding: 20px;
+        background-color: #ffffff; /* White background for content */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+        border-radius: 8px; /* Rounded corners */
+    }
+}
