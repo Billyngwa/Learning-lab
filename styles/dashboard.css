@@ -1,12 +1,14 @@
 .dashboard {
   display: flex;
-  align-items: center;
   min-height: 100vh;
   background-color: #f0f4f8; /* Light background */
 }
 .dashboard main {
-  width: 30%;
+  width: 20%;
   background-color: white;
+}
+.dashboard main .logo {
+  margin-left: 10%;
 }
 .dashboard main nav.sidebar {
   background-color: #ffffff; /* White background for sidebar */
