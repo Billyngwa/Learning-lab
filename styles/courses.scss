@@ -384,4 +384,17 @@
             justify-content: center;
         }
     }
+main{
+    height: inherit;
+    width: inherit;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+section.class{
+    background-color: aquamarine;
+
+
+}
 }

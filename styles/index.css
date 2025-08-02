@@ -10,7 +10,7 @@
 }
 
 * {
-  font-size: 40px;
+  font-size: 30px;
   font-family: "Google Sans Code", monospace;
 }
 
@@ -47,7 +47,7 @@ div.logo {
 }
 
 header {
-  width: 80%;
+  width: 100%;
   margin-left: 10%;
 }
 header section {
@@ -94,6 +94,10 @@ p.register {
 p.register:hover {
   background-color: orange;
   color: teal;
+}
+footer{
+  text-align: center;
+  background-color: teal;
 }
 
 form {
@@ -1007,6 +1011,9 @@ body {
   color: black;
 }
 .main-content section.left ul.flex {
+section {
+  text-align: center;
+  border-radius: 10px;
   display: flex;
   gap: 10px;
   list-style: none;
@@ -1132,3 +1139,29 @@ body {
   color: black;
   list-style-type: disc;
 }/*# sourceMappingURL=index.css.map */
+main.services{
+    height: inherit;
+    width: inherit;
+    border-width: 5px;
+    border-radius: 5px;
+    justify-content: space-between;
+} 
+section.subjet{
+  border-radius: 15px;
+    margin: 10px;
+    padding: 10PX;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  div{ 
+  width: 30%;
+  height: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+ 
+}
+}
