@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "monospace ";
+}
+
+.girlkelly {
+  text-align: center;
+}
+
 .main-content {
   margin-top: 2px;
   width: 90%;
@@ -111,6 +122,10 @@
 }
 .main-content section.education div.edu-sec p {
   margin-left: 2%;
+}
+.main-content section.education div.edu-sec p.internship {
+  display: flex;
+  flex-direction: row;
 }
 .main-content section.skills {
   margin-top: 50px;

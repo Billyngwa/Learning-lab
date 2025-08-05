@@ -1,83 +1,110 @@
-.main-content{
+// @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "monospace ";
+}
+.girlkelly{
+    text-align: center;
+}
+.main-content {
     margin-top: 2px;
     width: 90%;
     margin: 0 auto;
-    section.left{
-        h1.text-center{
-            font-size:20px;
+
+    section.left {
+        h1.text-center {
+            font-size: 20px;
             color: black;
         }
-        ul.flex{
+
+        ul.flex {
             display: flex;
             gap: 10px;
             list-style: none;
             justify-content: center;
-            .last-child{
-                                border-right:none;
+
+            .last-child {
+                border-right: none;
 
             }
-            li{
-                margin-top:5px;
+
+            li {
+                margin-top: 5px;
                 padding: 5px 10px;
                 // background-color: #f0f0f0;
-                border-right:solid #333 1px;
+                border-right: solid #333 1px;
                 border-radius: 5px;
                 font-size: 18px;
-                a{
+
+                a {
                     text-decoration: none;
                     color: #333;
                     font-size: 18px;
-                    &:hover{
+
+                    &:hover {
                         color: #007bff;
                     }
                 }
             }
         }
+
         border-bottom: solid #333 1px;
         padding-bottom: 10px;
     }
-    section.right{
+
+    section.right {
         margin-top: 70px;
-            border-bottom: solid #333 1px;
+        border-bottom: solid #333 1px;
         padding-bottom: 10px;
-        h1{
+
+        h1 {
             margin-bottom: 20px;
-            font-size:20px;
+            font-size: 20px;
             color: black;
             text-align: left;
         }
-        p{
+
+        p {
             font-size: 16px;
             color: black;
         }
     }
 
-    section.experience{
-           margin-top: 50px;
-            border-bottom: solid #333 1px;
+    section.experience {
+        margin-top: 50px;
+        border-bottom: solid #333 1px;
         padding-bottom: 10px;
-            h1{
+
+        h1 {
             margin-bottom: 20px;
-            font-size:20px;
+            font-size: 20px;
             color: black;
             text-align: left;
         }
-               h2{
+
+        h2 {
             margin-bottom: 10px;
-            font-size:20px;
+            font-size: 20px;
             color: black;
             text-align: left;
         }
-            p{
+
+        p {
             margin-bottom: 10px;
-            font-size:18px;
+            font-size: 18px;
             color: black;
             text-align: left;
         }
-        ul{
-            margin-left:4%;
-              margin-bottom: 20px;
-            li{
+
+        ul {
+            margin-left: 4%;
+            margin-bottom: 20px;
+
+            li {
                 margin-bottom: 10px;
                 font-size: 20px;
                 color: black;
@@ -85,57 +112,71 @@
             }
         }
     }
-    section.education{
-         margin-top: 50px;
-            border-bottom: solid #333 1px;
+
+    section.education {
+        margin-top: 50px;
+        border-bottom: solid #333 1px;
         padding-bottom: 10px;
-            h1{
+
+        h1 {
             margin-bottom: 20px;
-            font-size:20px;
+            font-size: 20px;
             color: black;
             text-align: left;
         }
-               h2{
+
+        h2 {
             margin-bottom: 10px;
-            font-size:20px;
+            font-size: 20px;
             color: black;
             text-align: left;
         }
-            p{
+
+        p {
             margin-bottom: 10px;
-            font-size:18px;
+            font-size: 18px;
             color: black;
             text-align: left;
         }
-        div.edu-sec{
+
+        div.edu-sec {
             margin: 20px;
-            p{
-                            margin-left:2%;
+
+            p {
+                margin-left: 2%;
 
             }
+
+            p.internship {
+                display: flex;
+                flex-direction: row;
+            }
         }
     }
-    section.skills{
-            margin-top: 50px;
-            border-bottom: solid #333 1px;
+
+    section.skills {
+        margin-top: 50px;
+        border-bottom: solid #333 1px;
         padding-bottom: 10px;
-            h1{
+
+        h1 {
             margin-bottom: 20px;
-            font-size:20px;
+            font-size: 20px;
             color: black;
             text-align: left;
         }
-        
-         ul{
-            margin-left:4%;
-              margin-bottom: 20px;
-            li{
+
+        ul {
+            margin-left: 4%;
+            margin-bottom: 20px;
+
+            li {
                 margin-bottom: 10px;
                 font-size: 20px;
                 color: black;
                 list-style-type: disc;
             }
         }
-        
+
     }
 }
