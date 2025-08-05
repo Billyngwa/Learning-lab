@@ -1,7 +1,7 @@
     body {
       font-family: Arial, sans-serif;
       margin: 40px;
-      background-color: #f9f9f9;
+      background-color: hwb(273 17% 8% / 0.884);
     }
     .team {
       display: flex;
@@ -13,6 +13,7 @@
       background-color: #fff;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-family: californian FB;
       padding: 20px;
       width: 220px;
       text-align: center;
