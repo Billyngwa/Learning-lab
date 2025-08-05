@@ -93,55 +93,55 @@
                     <option value="u6" class="classValue">Upper sixth</option>
                 </select>
         <section class="subjet">
-            <div>
+            <div class="subjectValue">
                 <h2>Mathematics</h2>
-                <button type="button">Start solving</button>
+                <button href="./Notes/Maths-Form-1-Notes.pdf" type="button">Start solving</button>
             </div>
-            <div>
+            <div class="subjectValue">
                 <h2>Physics</h2>
-                <button type="button">Get Start</button>
+                <button href="https://app.easyelimu.com/lessons/6-high-school/6-form-1/51-physics" type="button">Get Start</button>
             </div>
-            <div>
+            <div class="subjectValue">
                 <h2>Chemistry</h2>
-                <button type="button">Go to lab</button>
+                <button href="../Notes/FORM-1-CHEMISTRY-NOTES.pdf" type="button">Go to lab</button>
             </div>
-            <div>
+            <div class="subjectValue">
                 <h2>Biology</h2>
-                <button type="button">Go to lab</button>
+                <button href="../Notes/Biology-Form-1-Notes.pdf" type="button">Go to lab</button>
             </div>
-            <div>
+            <div class="subjectValue">
                 <h2>Economics</h2>
                 <button type="button">Get start</button>
             </div>
-            <div>
+            <div class="subjectValue">
                 <h2>Computer Science</h2>
-                <button href="../Notes/Form-1-Computer-Notes.pdf" type="button">Get start</button>
+                <button href="Form-1-Computer-Notes.pdf" type="button">Get start</button>
             </div>
-            <div>
+            <div class="subjectValue">
                 <h2>Commers</h2>
                 <button type="button">Get start</button>
             </div>
-            <div>
+            <div class="subjectValue">
                 <h2>History</h2>
                 <button type="button">Get start</button>
             </div>
-            <div>
+            <div class="subjectValue">
                 <h2>Literature</h2>
                 <button type="button">Get start</button>
             </div>
-            <div>
+            <div class="subjectValue">
                 <h2>Citizenship</h2>
                 <button type="button">Get start</button>
             </div>
-            <div>
+            <div class="subjectValue">
                 <h2>English</h2>
                 <button href="https://app.easyelimu.com/lessons/6-high-school/6-form-1/49-english" type="button">Get start</button>
             </div>
-            <div>
+            <div class="subjectValue">
                 <h2>Home Economics</h2>
                 <button type="button">Get start</button>
             </div>
-            <div>
+            <div class="subjectValue">
                 <h2>Geography</h2>
                 <button type="button">Get start</button>
             </div>
@@ -171,6 +171,38 @@
             "Lower Sixth",
             "Upper Sixth"
             ];
+        const form1 = [
+            "Mathematics",
+            "English",
+            "Chemitry",
+            "Biology",
+            "Economics",
+            "Additional Mathematics",
+            "French",
+            
+            ]
+        const classes = document.querySelector(".select");
+        let selectedClass = "";
+        if (classes) {
+            classes.addEventListener("click", (event) => {
+                const classValue = document.getElementsByClassName("classValue");
+                for (let i = 0; i < classValue.length; i++){
+                    if(classValue[i].value === event.target.value){
+                        selectedClass = classValue[i].value;
+                    }
+                    console.log("Selected Class:", selectedClass);
+                }
+                if (selectedClass === "Form 1") {
+                    const allSubjects = document.getElementsByClassName("subjectValue");
+                    if (allSubjects) {
+                        for (let i = 0; i < allSubjects.item; i++){
+                            allSubjects[i].value === form1[i];
+                            allSubjects[i].innerHTML = form1[i];
+                        }
+                    }
+                }
+            })
+        }
         const selectElement = document.querySelector(".select");
         let selectedSection = "";
         if (selectElement) {
