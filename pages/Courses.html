@@ -171,7 +171,7 @@
             "Lower Sixth",
             "Upper Sixth"
             ];
-        const form1 = [
+        const subjects = [
             "Mathematics",
             "English",
             "Chemitry",
@@ -179,7 +179,14 @@
             "Economics",
             "Additional Mathematics",
             "French",
-            
+            "Computer Science",
+            "Commers",
+            "Literature",
+            "Hitory",
+            "Geography",
+            "Religion Studies",
+            "Citizenship",
+            "Home Economics",
             ]
         const classes = document.querySelector(".select");
         let selectedClass = "";
@@ -191,6 +198,8 @@
                         selectedClass = classValue[i].value;
                     }
                     console.log("Selected Class:", selectedClass);
+                    const fileOpener = File()
+                    fileOpener.open()
                 }
                 if (selectedClass === "Form 1") {
                     const allSubjects = document.getElementsByClassName("subjectValue");
