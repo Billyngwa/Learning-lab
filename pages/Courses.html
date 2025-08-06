@@ -142,7 +142,7 @@
         <section class="subjet">
             <div>
                 <h2>Mathematics</h2>
-                <button type="button">Start solving</button>
+                <button href="./Notes/Maths-Form-1-Notes.pdf" type="button">Start solving</button>
             </div>
             <div>
                 <h2>Physics</h2>
@@ -219,6 +219,38 @@
             "Lower Sixth",
             "Upper Sixth"
             ];
+        const form1 = [
+            "Mathematics",
+            "English",
+            "Chemitry",
+            "Biology",
+            "Economics",
+            "Additional Mathematics",
+            "French",
+            
+            ]
+        const classes = document.querySelector(".select");
+        let selectedClass = "";
+        if (classes) {
+            classes.addEventListener("click", (event) => {
+                const classValue = document.getElementsByClassName("classValue");
+                for (let i = 0; i < classValue.length; i++){
+                    if(classValue[i].value === event.target.value){
+                        selectedClass = classValue[i].value;
+                    }
+                    console.log("Selected Class:", selectedClass);
+                }
+                if (selectedClass === "Form 1") {
+                    const allSubjects = document.getElementsByClassName("subjectValue");
+                    if (allSubjects) {
+                        for (let i = 0; i < allSubjects.item; i++){
+                            allSubjects[i].value === form1[i];
+                            allSubjects[i].innerHTML = form1[i];
+                        }
+                    }
+                }
+            })
+        }
         const selectElement = document.querySelector(".select");
         let selectedSection = "";
         if (selectElement) {
