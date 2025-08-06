@@ -73,6 +73,7 @@ div.hero-text h1 {
 .hero-image {
   width: 50%;
   height: 800px;
+  
 }
 
 .hero-image img {
@@ -149,7 +150,7 @@ p.register:hover {
 body {
   font-family: Arial, sans-serif;
   margin: 40px;
-  background-color: lab(34.27% 66.24 -76.43 / 0.884);
+  background-color: lab(100% 0.01 -0.01 / 0.884);
 }
 
 
