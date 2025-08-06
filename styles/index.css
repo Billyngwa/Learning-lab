@@ -149,8 +149,9 @@ p.register:hover {
 body {
   font-family: Arial, sans-serif;
   margin: 40px;
-  background-color: hsl(261, 80%, 56%);
+  background-color: lab(34.27% 66.24 -76.43 / 0.884);
 }
+
 
 .team {
   display: flex;
