@@ -95,7 +95,7 @@
         <section class="subjet">
             <div class="subjectValue">
                 <h2>Mathematics</h2>
-                <button href="./Notes/Maths-Form-1-Notes.pdf" type="button">Start solving</button>
+                <button onclick="openPdfInNewTab('Maths-FORM-1-Note.pdf')" type="button">Start solving</button>
             </div>
             <div class="subjectValue">
                 <h2>Physics</h2>
@@ -188,6 +188,15 @@
             "Citizenship",
             "Home Economics",
             ]
+            
+            function openPdfInNewTab(pdfurl){
+                const link = document.createElement('a');
+                link.href = pdfurl;
+                link.target = '_blank';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
         const classes = document.querySelector(".select");
         let selectedClass = "";
         if (classes) {
@@ -197,6 +206,7 @@
                     if(classValue[i].value === event.target.value){
                         selectedClass = classValue[i].value;
                     }
+                    window.open(https:/app.easyelimu.com/lessons/6-high-school/6-form-1/51-physics,'_blank');
                     console.log("Selected Class:", selectedClass);
                     const fileOpener = File()
                     fileOpener.open()
