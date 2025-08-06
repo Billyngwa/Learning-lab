@@ -11,7 +11,7 @@
 }
 
 * {
-  font-size: 40px;
+  font-size: 30px;
   font-family: "Google Sans Code", monospace;
 }
 
@@ -48,7 +48,7 @@ div.logo {
 }
 
 header {
-  width: 80%;
+  width: 100%;
   margin-left: 10%;
 }
 header section {
@@ -95,6 +95,10 @@ p.register:hover {
   background-color: orange;
   color: teal;
 }
+footer{
+  text-align: center;
+  background-color: teal;
+}
 
 .dashboard {
   display: flex;
@@ -122,7 +126,7 @@ p.register:hover {
   padding: 10px;
   color: #333; /* Dark text color */
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   border-radius: 4px; /* Rounded corners for links */
   transition: background-color 0.3s ease;
 }
@@ -131,9 +135,43 @@ p.register:hover {
   color: #00796b; /* Darker teal text on hover */
 }
 .dashboard .dashboard-content {
-  width: 70%;
+  width: 100%;
   padding: 20px;
   background-color: #ffffff; /* White background for content */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   border-radius: 8px; /* Rounded corners */
-}/*# sourceMappingURL=index.css.map */
+}
+main.services{
+    height: inherit;
+    width: inherit;
+    border-width: 5px;
+    border-radius: 5px;
+    justify-content: space-between;
+} 
+section.subjet{
+  border-radius: 15px;
+    margin: 10px;
+    padding: 10PX;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  div{ 
+  width: 30%;
+  height: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  button{
+    background-color: #ceece9;
+    border-radius: 10px;
+    border: none;
+  }
+  button:hover{
+     background-color: #00796b; /* Light teal on hover */
+  color: blanchedalmond; /* Darker teal text on hover */
+  }
+  }
+ 
+}
