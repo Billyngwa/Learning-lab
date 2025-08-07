@@ -11,7 +11,7 @@
 }
 
 * {
-  font-size: 40px;
+  font-size: 30px;
   font-family: "Google Sans Code", monospace;
 }
 
@@ -48,7 +48,7 @@ div.logo {
 }
 
 header {
-  width: 80%;
+  width: 100%;
   margin-left: 10%;
 }
 header section {
@@ -94,6 +94,10 @@ p.register {
 p.register:hover {
   background-color: orange;
   color: teal;
+}
+footer{
+  text-align: center;
+  background-color: teal;
 }
 
 .dashboard {
@@ -167,6 +171,7 @@ p.register:hover {
   border-radius: 4px;
   font-size: 26px;
   /* Rounded corners for links */
+
   transition: background-color 0.3s ease;
 }
 .dashboard main nav.sidebar ul li a:hover {
@@ -176,7 +181,7 @@ p.register:hover {
   /* Darker teal text on hover */
 }
 .dashboard .dashboard-content {
-  width: 70%;
+  width: 100%;
   padding: 20px;
   background-color: #ffffff;
   /* White background for content */
@@ -404,3 +409,4 @@ p.register:hover {
   color: black;
   list-style-type: disc;
 }/*# sourceMappingURL=index.css.map */
+
