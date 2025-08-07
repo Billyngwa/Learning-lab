@@ -254,15 +254,6 @@ h1 {
 .dashboard main nav.sidebar ul {
   display: block;
 }
-.dashboard main nav.sidebar ul li {
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-.dashboard main nav.sidebar ul li.active a {
-  background-color: #e0f7fa;
-  color: #00796b;
-  font-weight: 500;
-}
 .dashboard main nav.sidebar ul li a {
   display: flex;
   align-items: center;
@@ -272,7 +263,6 @@ h1 {
   text-decoration: none;
   font-weight: 300;
   border-radius: 4px;
-  font-size: 16px;
   /* Rounded corners for links */
   transition: background-color 0.3s ease;
 }
