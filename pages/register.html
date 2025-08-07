@@ -1,79 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <!-- <link rel="stylesheet" href="../styles/register.css"> -->
-    <script src="https://kit.fontawesome.com/a14b3ad818.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="../styles/register.css">
+        <script src="https://kit.fontawesome.com/a14b3ad818.js" crossorigin="anonymous"></script>
 
+</head>
 <body>
     <form action="./login.html" method="post">
-        <div class="hero-image">
-            <img src="../images/logo.png" alt="Hero Image">
-        </div>
         <h1>
             Register and start learning
         </h1>
         <p class="infoexplanation">
             Please fill in the details below to create an account.
-        </p>
-        <div class="form-holder">
-            <div class="field-holder">
-                <label for="firstName">first name:</label>
-                <input type="text" id="firstName" name="firstName" required>
-            </div>
-            <div class="field-holder">
-                <label for="lastName">last name:</label>
-                <input type="text" id="lastName" name="lastName" required>
-            </div>
-            <div class="field-holder">
-                <label for="email">email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="field-holder">
-                <label for="password">password:</label>
-                <div class="password-field">
-                    <input type="password" id="password" name="password" required>
-                    <i class="fas fa-eye-slash" id="togglePassword"></i>
-                </div>
-
-
-            </div>
-            <div class="field-holder">
-                <label for="confirmPassword">confirm password:</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" required>
-            </div>
-            <div class="field-holder">
-                <label for="phone">phone:</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="field-holder submit-holder">
-                <button type="submit" class="register-button">Register</button>
-            </div>
-            <div class="alreadyhaveaccount">
-                <p>Already have an account? <a href="./login.html">Login</a></p>
-            </div>
+        <div class="field-holder">
+            <label for="firstName">first name:</label>
+            <input type="text" id="firstName" name="firstName" required>
         </div>
+    <div class="field-holder">
+            <label for="lastName">last name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <div class="field-holder">
+            <label for="email">email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field-holder">   
+            <label for="password">password:</label>
+            <div>
+                <input type="password" id="password" name="password" required>
+                <i class="fas fa-eye-slash" id="togglePassword"></i>
+            </div>
 
+
+        </div>
+        <div class="field-holder">
+            <label for="confirmPassword">confirm password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+        </div>
+        <div class="field-holder">
+            <label for="phone">phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div>
+            <button type="submit" class="register-button">Register</button>
+        </div>
+        <div class="alreadyhaveaccount">
+            <p>Already have an account? <a href="./login.html">Login</a></p>
+        </div>
     </form>
     <script>
-        const firstName = document.querySelector("#firstName");
-        const lastName = document.querySelector("#lastName");
-        const email = document.querySelector("#email");
-        const password = document.querySelector("#password");
-        const confirmPassword = document.querySelector("#confirmPassword");
-        const phone = document.querySelector("#phone");
-        const registerButton = document.querySelector(".register-button");
+        const firstName= document.querySelector("#firstName");
+        const lastName= document.querySelector("#lastName");
+        const email= document.querySelector("#email");
+        const password= document.querySelector("#password");
+        const confirmPassword= document.querySelector("#confirmPassword");
+        const phone= document.querySelector("#phone");
+        const registerButton= document.querySelector(".register-button");
 
-        //function to show or hide password
+            //function to show or hide password
         const togglePassword = document.querySelector("#togglePassword");
         togglePassword.addEventListener("click", function () {
             togglePassword.setAttribute("class", togglePassword.getAttribute("class") === "fas fa-eye-slash" ? "fas fa-eye" : "fas fa-eye-slash");
@@ -81,29 +68,28 @@
             const confirmPasswordField = document.querySelector("#confirmPassword");
             const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
             passwordField.setAttribute("type", type);
-            confirmPasswordField.setAttribute("type", type);
-        })
+            confirmPasswordField.setAttribute("type", type);}  )
 
 
-        const userData = {
-            firstName: firstName.value,
-            lastName: lastName.value,
-            email: email.value,
-            password: password.value,
-            confirmPassword: confirmPassword.value,
-            phone: phone.value
+        const userData= {
+            firstName:firstName.value,
+            lastName:lastName.value,
+            email:email.value,
+            password:password.value,
+            confirmPassword:confirmPassword.value,
+            phone:phone.value
         }
         registerButton.addEventListener("click", (e) => {
             e.preventDefault(); // Prevent form submission
-            const userData = {
-                firstName: firstName.value,
-                lastName: lastName.value,
-                email: email.value,
-                password: password.value,
-                confirmPassword: confirmPassword.value,
-                phone: phone.value
-            }
-            if (!firstName.value || !lastName.value || !email.value || !password.value || !confirmPassword.value || !phone.value) {
+              const userData= {
+            firstName:firstName.value,
+            lastName:lastName.value,
+            email:email.value,
+            password:password.value,
+            confirmPassword:confirmPassword.value,
+            phone:phone.value
+        }
+        if(!firstName.value || !lastName.value || !email.value || !password.value || !confirmPassword.value || !phone.value) {
                 alert("Please fill in all fields.");
                 return;
             }
@@ -113,14 +99,13 @@
                 alert("Passwords do not match!");
                 return;
             }
-            alert("Passwords match!"); // For demonstration purposes
+                        alert("Passwords match!"); // For demonstration purposes
 
             alert("Registration successful!");
             location.href = "./login.html";
         });
         console.log("data: ", userData);
-
+        
     </script>
 </body>
-
 </html>

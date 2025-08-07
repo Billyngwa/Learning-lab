@@ -19,14 +19,3 @@ function divideNumbers(a, b) {
 
 let sum = addNumbers(5,3)
 console.log("Sum:", sum);
-
-const selectElement = document.querySelector(".select");
-selectElement.addEventListener("click", (event) => {
-    const optionValues = document.getElementsByClassName("optionValue");
-    for (let i = 0; i < optionValues.length; i++) {
-        if (optionValues[i].value === event.target.value) {
-            console.log("Selected value:", optionValues[i].value);
-        }
-    }
-    event.preventDefault();
-})

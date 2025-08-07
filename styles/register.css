@@ -1,125 +1,69 @@
-form {
-  width: 50%;
-  margin-left: 25%;
-  background-color: whitesmoke;
-  border-radius: 10px;
-  padding: 20px 0px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 3%;
+form{
+    width:50%;
+    margin-left: 25%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 5%;
 }
-form .hero-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-left: 45%;
+div.img{
+    display: flex ;
+    justify-content: center;
+    
 }
-form .hero-image img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-form .form-holder {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
+div.img img{
+   width: 130px;
+    height: 130px;
+    margin-top: 20px;
+    border-radius: 50%;
 }
 
-div.img {
-  display: flex;
-  justify-content: center;
+.field-holder{
+    width: 90%;  
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    label{
+        font-size: 20px;
+        color: black;
+    }
+    input{
+        width: 60%;
+        height: 20px;
+        border-radius:5px;
+        border: 1px solid rgba(0, 0, 0, 0.446);
+        padding-left: 10px;
+        font-size: 20px;
+        margin-top: 5px;
+    }
 }
-
-div.img img {
-  width: 130px;
-  height: 130px;
-  margin-top: 20px;
-  border-radius: 50%;
+.register-button{
+    width: 200px;
+    height: 50px;
+    background-color: teal;
+    color: orange;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    margin-left: 25%;
+    cursor: pointer;
+    margin-top: 15px;
 }
-
-.field-holder {
-  width: 60%;
-  margin-left: 20%;
-  display: flex;
-  flex-direction: column;
+h1{
+    text-align: center;
+    color: teal;
+    font-size: 40px;
+    margin-top: 20px;
 }
-.field-holder label {
-  font-size: 20px;
-  color: black;
-  text-transform: capitalize;
+.infoexplanation{
+    width: 90%;
+    margin-left: 5%;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    margin-top: 20px;
 }
-.field-holder div.password-field {
-  display: flex;
-  position: relative;
-}
-.field-holder div.password-field i {
-  position: absolute;
-  margin-left: 83%;
-  margin-top: 10px;
-  cursor: pointer;
-  font-size: 20px;
-}
-.field-holder input {
-  width: 90%;
-  height: 20px;
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.446);
-  padding: 15px;
-  font-size: 20px;
-  margin-top: 5px;
-}
-
-.register-button {
-  width: 200px;
-  height: 50px;
-  background-color: teal;
-  color: orange;
-  border-radius: 10px;
-  border: none;
-  font-size: 20px;
-  margin-left: 25%;
-  cursor: pointer;
-  margin-top: 15px;
-}
-.register-button:hover {
-  background-color: orange;
-  color: teal;
-}
-
-h1 {
-  text-align: center;
-  color: teal;
-  font-size: 40px;
-  margin-top: 20px;
-}
-
-.infoexplanation {
-  width: 90%;
-  margin-left: 5%;
-  text-align: center;
-  font-size: 20px;
-  color: black;
-  margin-top: 20px;
-}
-
-.field-holder {
-  display: flex;
-  justify-self: center;
-}
-
-.alreadyhaveaccount {
-  width: 80%;
-  margin-left: 10%;
-  text-align: center;
-  font-size: 20px;
-}
-.alreadyhaveaccount p {
-  font-size: 16px;
-}
-.alreadyhaveaccount p a {
-  font-size: 16px;
-  text-decoration: underline;
-}/*# sourceMappingURL=register.css.map */

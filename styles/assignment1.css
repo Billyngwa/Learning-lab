@@ -1,0 +1,44 @@
+body{
+    background-color: aqua;
+}
+footer{
+    background-color: black;
+    margin-top: 18%;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    width:90%;
+    margin-left: 5%;
+}
+li.social-media{
+    background-color: white;
+    padding: 6px;
+    border-radius: 50%;
+    a{
+        color: black;
+    }
+    /* gap: 4px; */
+}
+ul.social-media{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+ul.footer-links{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+
+   
+}
+ul.footer-links li a{
+            color: white;
+text-decoration: none;
+}
+p.copyright{
+    color:white;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 25px;
+}
