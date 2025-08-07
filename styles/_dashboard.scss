@@ -33,10 +33,50 @@
 
             ul {
                 display: block;
-                  div.upgrade-section {
+                li {
+                    font-size: 20px;
+                    margin-bottom: 8px;
+                    
+                    &.active a {
+                        background-color: #e0f7fa;
+                        color: #00796b;
+                        font-weight: 500;
+                    }
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        padding: 10px;
+                        color: #333;
+                        /* Dark text color */
+                        text-decoration: none;
+                        font-weight: 300;
+                        border-radius: 4px;
+                        font-size: 16px;
+
+                        /* Rounded corners for links */
+                        transition: background-color 0.3s ease;
+
+                        i {
+                            margin-right: 12px;
+                            width: 20px;
+                            text-align: center;
+                            font-size: 18px;
+                            color: #00796b;
+                        }
+
+                        &:hover {
+                            background-color: #e0f7fa;
+                            /* Light teal on hover */
+                            color: #00796b;
+                            /* Darker teal text on hover */
+                        }
+                    }
+
+                    div.upgrade-section {
                         margin-top: 20px;
-                        padding: 10px 10px;
-                        width: 80%;
+                        padding: 20px 15px;
+                        width: 90%;
                         background-color: #e0f7fa;
                         /* Light teal background */
                         border-radius: 8px;
@@ -46,22 +86,27 @@
                             font-size: 16px;
                             color: #00796b;
                             /* Darker teal */
+                            margin-bottom: 5px;
                         }
 
                         p {
-                            font-size: 16px;
+                            font-size: 13px;
                             color: #555;
                             /* Dark gray */
+                            margin-bottom: 12px;
                         }
 
                         button {
-                            padding: 10px 20px;
+                            padding: 8px 20px;
                             background-color: #00796b;
                             /* Darker teal */
                             color: white;
                             border: none;
-                            border-radius: 4px;
+                            border-radius: 20px;
                             cursor: pointer;
+                            font-weight: 500;
+                            font-size: 14px;
+                            transition: all 0.3s ease;
 
                             &:hover {
                                 background-color: #004d40;
@@ -75,8 +120,7 @@
 
                   
                     a {
-                        display: flex;
-                        align-items: center;
+                        display: block;
                         padding: 10px;
                         color: #333;
                         /* Dark text color */
@@ -87,14 +131,6 @@
 
                         /* Rounded corners for links */
                         transition: background-color 0.3s ease;
-
-                        i {
-                            margin-right: 12px;
-                            width: 20px;
-                            text-align: center;
-                            font-size: 18px;
-                            color: #00796b;
-                        }
 
                         &:hover {
                             background-color: #e0f7fa;
@@ -174,474 +210,80 @@
 
             ul {
                 display: flex;
-                align-items: center;
-                gap: 20px;
-
-                li {
-                    &.search-bar {
-                        position: relative;
-                        
-                        i {
-                            position: absolute;
-                            left: 12px;
-                            top: 65%;
-                            transform: translateY(-50%);
-                            color: #888;
-                            font-size: 18px;
-                        }
-                        
-                        input.search {
-                            padding: 10px 10px 10px 35px;
-                            border: 1px solid #e0e0e0;
-                            border-radius: 20px;
-                            font-size: 14px;
-                            width: 220px;
-                            transition: all 0.3s ease;
-                            
-                            &:focus {
-                                outline: none;
-                                border-color: #00796b;
-                                box-shadow: 0 0 0 2px rgba(0, 121, 107, 0.1);
-                                width: 250px;
-                            }
-                        }
-                    }
-                    
-                    &.notification {
-                        position: relative;
-                        
-                        i {
-                            font-size: 18px;
-                            color: #444;
-                            cursor: pointer;
-                        }
-                        
-                        .notification-count {
-                            position: absolute;
-                            top: -8px;
-                            right: -8px;
-                            background-color: #ff5722;
-                            color: white;
-                            font-size: 11px;
-                            width: 18px;
-                            height: 18px;
-                            border-radius: 50%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                        }
-                    }
-                    
-                    &.user-profile {
-                        display: flex;
-                        align-items: center;
-                        gap: 8px;
-                        cursor: pointer;
-                        
-                        .profile-image {
-                            width: 36px;
-                            height: 36px;
-                            border-radius: 50%;
-                            object-fit: cover;
-                        }
-                        
-                        .username {
-                            font-weight: 500;
-                            font-size:18px;
-                            color: #333;
-                        }
-                    }
-                }
-            }
-        }
-        
-        .dashboard-main {
-            padding: 10px 0;
-            width:90%;
-            
-            .dashboard-overview {
-                margin-bottom: 30px;
-                
-                h2 {
-                    font-size: 20px;
-                    font-weight: 600;
-                    color: #333;
-                    margin-bottom: 15px;
-                }
-                
-                .stats-cards {
-                    display:flex;
-                    justify-content:space-between;
-                    // display: grid;
-                    // grid-template-columns: repeat(4, 1fr);
-                    // gap: 20px;
-                    
-                    .stat-card {
-                        background: white;
-                        border-radius: 10px;
-                        padding: 20px;
-                        display: flex;
-                        align-items: center;
-                        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-                        transition: transform 0.3s ease;
-                        
-                        &:hover {
-                            transform: translateY(-5px);
-                        }
-                        
-                        i {
-                            font-size: 28px;
-                            color: #00796b;
-                            margin-right: 15px;
-                            background-color: #e0f7fa;
-                            width: 50px;
-                            height: 50px;
-                            border-radius: 50%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                        }
-                        
-                        .stat-info {
-                            h3 {
-                                font-size: 24px;
-                                font-weight: 700;
-                                color: #333;
-                                margin-bottom: 5px;
-                            }
-                            
-                            p {
-                                font-size: 14px;
-                                color: #666;
-                            }
-                        }
-                    }
-                }
-            }
-            
-            .section-header {
-                display: flex;
                 justify-content: space-between;
-                align-items: center;
-                margin-bottom: 15px;
-                
-                h2 {
-                    font-size: 20px;
-                    font-weight: 600;
-                    color: #333;
-                }
-                
-                .view-all {
-                    color: #00796b;
-                    font-size: 14px;
-                    font-weight: 500;
-                    text-decoration: none;
-                    
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
-            
-            .user-courses {
-                margin-bottom: 30px;
-                
-                .course-list {
+
+                // align-items: center;
+                li.search-bar {
+                    border: 1px solid #ccc;
+                    padding: 1px 4px;
+
+                    border-radius: 4px;
                     display: flex;
-                    flex-direction: column;
-                    gap: 15px;
-                    
-                    .course-item {
-                        background: white;
-                        border-radius: 10px;
-                        overflow: hidden;
-                        display: flex;
-                        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-                        transition: transform 0.3s ease;
-                        
-                        &:hover {
-                            transform: translateY(-3px);
-                            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-                        }
-                        
-                        .course-image {
-                            width: 200px;
-                            position: relative;
-                            
-                            img {
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
-                            }
-                            
-                            .progress-indicator {
-                                position: absolute;
-                                bottom: 0;
-                                left: 0;
-                                height: 5px;
-                                background: #00796b;
-                            }
-                        }
-                        
-                        .course-details {
-                            flex: 1;
-                            padding: 15px 20px;
-                            
-                            h3 {
-                                font-size: 18px;
-                                font-weight: 600;
-                                color: #333;
-                                margin-bottom: 5px;
-                            }
-                            
-                            .instructor {
-                                color: #666;
-                                font-size: 14px;
-                                margin-bottom: 10px;
-                            }
-                            
-                            .course-meta {
-                                display: flex;
-                                justify-content: space-between;
-                                margin-bottom: 15px;
-                                
-                                .progress {
-                                    font-weight: 500;
-                                    color: #00796b;
-                                }
-                                
-                                .duration {
-                                    color: #888;
-                                    font-size: 14px;
-                                    
-                                    i {
-                                        margin-right: 5px;
-                                    }
-                                }
-                            }
-                            
-                            .continue-btn {
-                                display: inline-block;
-                                background: #00796b;
-                                color: white;
-                                padding: 8px 15px;
-                                border-radius: 20px;
-                                text-decoration: none;
-                                font-size: 14px;
-                                font-weight: 500;
-                                transition: all 0.3s ease;
-                                
-                                &:hover {
-                                    background: #004d40;
-                                    transform: translateY(-2px);
-                                }
-                            }
-                        }
+                    align-items: center;
+                    gap: 10px;
+
+                    i {
+                        font-size: 17px;
                     }
-                }
-            }
-            
-            .user-activities {
-                margin-bottom: 30px;
-                
-                .activity-list {
-                    background: white;
-                    border-radius: 10px;
-                    padding: 15px;
-                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-                    
-                    .activity-item {
-                        display: flex;
-                        padding: 15px;
-                        border-bottom: 1px solid #f0f0f0;
-                        
-                        &:last-child {
-                            border-bottom: none;
-                        }
-                        
-                        .activity-icon {
-                            margin-right: 15px;
-                            width: 40px;
-                            height: 40px;
-                            border-radius: 50%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            
-                            i {
-                                font-size: 18px;
-                            }
-                            
-                            &.completed {
-                                background: rgba(0, 200, 83, 0.1);
-                                color: #00c853;
-                            }
-                            
-                            &.watched {
-                                background: rgba(33, 150, 243, 0.1);
-                                color: #2196f3;
-                            }
-                            
-                            &.comment {
-                                background: rgba(255, 152, 0, 0.1);
-                                color: #ff9800;
-                            }
-                        }
-                        
-                        .activity-details {
-                            h3 {
-                                font-size: 16px;
-                                font-weight: 500;
-                                color: #333;
-                                margin-bottom: 3px;
-                            }
-                            
-                            p {
-                                font-size: 14px;
-                                color: #666;
-                                margin-bottom: 5px;
-                            }
-                            
-                            .timestamp {
-                                font-size: 12px;
-                                color: #999;
-                            }
-                        }
-                    }
-                }
-            }
-            
-            .recommended-courses {
-                .recommended-grid {
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                    gap: 20px;
-                    
-                    .recommended-course {
-                        background: white;
-                        border-radius: 10px;
-                        overflow: hidden;
-                        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-                        transition: transform 0.3s ease;
-                        
-                        &:hover {
-                            transform: translateY(-5px);
-                        }
-                        
-                        img {
-                            width: 100%;
-                            height: 150px;
-                            object-fit: cover;
-                        }
-                        
-                        h3 {
-                            padding: 15px 15px 5px;
+
+                    input.search {
+                        height: 30px;
+                        width: 100%;
+                        border-radius: 4px;
+                        border: none;
+                        font-size: 20px;
+
+                        &::placeholder {
+                            color: #999;
                             font-size: 16px;
-                            font-weight: 600;
-                            color: #333;
                         }
-                        
-                        p {
-                            padding: 0 15px 15px;
-                            font-size: 14px;
-                            color: #666;
+
+                        &:focus {
+                            outline: none;
+                            border: none;
+                            /* Darker teal border on focus */
                         }
-                        
-                        .course-stats {
-                            display: flex;
-                            justify-content: space-between;
-                            padding: 10px 15px;
-                            background: #f9f9f9;
-                            border-top: 1px solid #f0f0f0;
-                            
-                            span {
-                                font-size: 13px;
-                                color: #666;
-                                
-                                i {
-                                    margin-right: 5px;
-                                    color: #00796b;
-                                }
-                            }
-                        }
+                    }
+                }
+
+                li.notification {
+                    position: relative;
+                    align-items: center;
+                    gap: 10px;
+
+                    i {
+                        // position: absolute;
+                        font-size: 27px;
+                    }
+
+                    span.notification-count {
+                        position: absolute;
+                        top: -5px;
+                        right: -10px;
+                        background-color: red;
+                        color: white;
+                        border-radius: 50%;
+                        padding: 2px 5px;
+                        font-size: 12px;
+                    }
+                }
+
+                li.user-profile {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    i {
+                        font-size: 27px;
+                    }
+
+                    span.username {
+                        font-size: 16px;
+                        color: #333;
                     }
                 }
             }
         }
     }
 }
-
-
-
-// Responsive styles for dashboard
-@media (max-width: 1024px) {
-    .dashboard {
-        flex-direction: column;
-        
-        main {
-            width: 100%;
-            
-            nav.sidebar {
-                display: none;
-            }
-        }
-        
-        .dashboard-content {
-            width: 100%;
-        }
-    }
-    
-    .dashboard-main {
-        .dashboard-overview .stats-cards {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        
-        .recommended-courses .recommended-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .dashboard-content nav {
-        flex-direction: column;
-        align-items: flex-start;
-        
-        h1 {
-            margin-bottom: 15px;
-        }
-        
-        ul {
-            width: 100%;
-            flex-wrap: wrap;
-            
-            li.search-bar input.search {
-                width: 100%;
-            }
-        }
-    }
-    
-    .dashboard-main {
-        .course-item {
-            flex-direction: column;
-            
-            .course-image {
-                width: 100%;
-                height: 180px;
-            }
-        }
-        
-        .recommended-courses .recommended-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-}
-
-
-// Additional styling for dashboard body
-.dashboard-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8;
 }
