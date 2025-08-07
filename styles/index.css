@@ -916,15 +916,78 @@ body {
 .member p.summary {
   font-size: 14px;
   color: #444;
+  background-color: #ffffff;
+  /* White background for content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  border-radius: 8px;
+  /* Rounded corners */
 }
-
-h1 {
-  text-align: center;
-  color: #08fafa;
+.dashboard .dashboard-content nav h1 {
+  font-size: 24px;
 }
-
-select {
+.dashboard .dashboard-content nav ul {
   display: flex;
   justify-content: space-between;
+}
+.dashboard .dashboard-content nav ul li.search-bar {
+  border: 1px solid #ccc;
+  padding: 1px 4px;
+  border-radius: 4px;
+  display: flex;
   align-items: center;
+  gap: 10px;
+}
+.dashboard .dashboard-content nav ul li.search-bar i {
+  font-size: 17px;
+}
+.dashboard .dashboard-content nav ul li.search-bar input.search {
+  height: 30px;
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  font-size: 20px;
+}
+.dashboard .dashboard-content nav ul li.search-bar input.search::-moz-placeholder {
+  color: #999;
+  font-size: 16px;
+}
+.dashboard .dashboard-content nav ul li.search-bar input.search::placeholder {
+  color: #999;
+  font-size: 16px;
+}
+.dashboard .dashboard-content nav ul li.search-bar input.search:focus {
+  outline: none;
+  border: none;
+  /* Darker teal border on focus */
+}
+.dashboard .dashboard-content nav ul li.notification {
+  position: relative;
+  align-items: center;
+  gap: 10px;
+}
+.dashboard .dashboard-content nav ul li.notification i {
+  font-size: 27px;
+}
+.dashboard .dashboard-content nav ul li.notification span.notification-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-size: 12px;
+}
+.dashboard .dashboard-content nav ul li.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.dashboard .dashboard-content nav ul li.user-profile i {
+  font-size: 27px;
+}
+.dashboard .dashboard-content nav ul li.user-profile span.username {
+  font-size: 16px;
+  color: #333;
 }/*# sourceMappingURL=index.css.map */
