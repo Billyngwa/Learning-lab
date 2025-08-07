@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://kit.fontawesome.com/a14b3ad818.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+
+<body class="dashboard-body">
+    <section class="dashboard">
+        <main>
+            <div class="logo">
+                <img src="../images/logo.png" alt="Hero Image">
+            </div>
+            <nav class="sidebar">
+                <ul>
+                    <li>
+                        <a href="../pages/dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+                    </li>
+                    <li class="active">
+                        <a href="../pages/courses.html"><i class="fa-solid fa-book"></i> My Courses</a>
+                    </li>
+                    <li>
+                        <a href="../pages/mentors.html"><i class="fa-solid fa-chalkboard-user"></i> Mentors</a>
+                    </li>
+                    <li>
+                        <a href="../pages/students.html"><i class="fa-solid fa-user-graduate"></i> Students</a>
+                    </li>
+                    <li>
+                        <a href="../pages/analytics.html"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+                    </li>
+                    <li>
+                        <a href="../pages/forum.html"><i class="fa-solid fa-comments"></i> Forum</a>
+                    </li>
+                    <li>
+                        <div class="upgrade-section">
+                            <h1>Upgrade to Pro</h1>
+                            <p>Get access to additional features</p>
+                            <button>Upgrade</button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../pages/about.html"><i class="fa-solid fa-gear"></i> Settings</a>
+                    </li>
+                    <li>
+                        <a href="../pages/help.html"><i class="fa-solid fa-circle-question"></i> Help</a>
+                    </li>
+                    <li>
+                        <a href="../pages/about.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                    </li>
+                </ul>
+            </nav>
+        </main>
+        <section class="dashboard-content">
+            <nav>
+                <h1>
+                    Courses
+                </h1>
+                <ul>
+                    <li class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input class="search" type="search" placeholder="Search courses...">
+                    </li>
+                    <li class="notification">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="notification-count">3</span>
+                    </li>
+                    <li class="user-profile">
+                        <img src="../images/logo.png" alt="Profile" class="profile-image">
+                        <span class="username">John Doe</span>
+                    </li>
+                </ul>
+            </nav>
+            <main class="course-section">
+                <!-- Header Section with Title and Description -->
+                <header class="course-header">
+                    <div class="title-section">
+                        <h1>Learning Resources</h1>
+                        <p>Select your curriculum and class to view relevant courses</p>
+                    </div>
+                    
+                    <!-- Course Selection Controls -->
+                    <div class="filters-section" aria-labelledby="filters-heading">
+                        <h2 id="filters-heading" class="sr-only">Course Filters</h2>
+                        
+                        <div class="filter-group">
+                            <label for="curriculum" class="filter-label">Curriculum</label>
+                            <div class="select-wrapper">
+                                <select name="school" id="curriculum" class="select" aria-label="Select curriculum">
+                                    <option value="select" hidden>Select Curriculum</option>
+                                    <option value="anglosaxon" class="optionValue">Anglosaxon</option>
+                                    <option value="francaise" class="optionValue">Francaise</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down select-icon"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="classLevel" class="filter-label">Class Level</label>
+                            <div class="select-wrapper">
+                                <select name="classes" id="classLevel" class="section-class" aria-label="Select class level">
+                                    <option value="select" hidden>Select Class</option>
+                                    <option value="form1" class="classValue">Form 1</option>
+                                    <option value="form2" class="classValue">Form 2</option>
+                                    <option value="form3" class="classValue">Form 3</option>
+                                    <option value="form4" class="classValue">Form 4</option>
+                                    <option value="form5" class="classValue">Form 5</option>
+                                    <option value="lowersixth" class="classValue">Lower sixth</option>
+                                    <option value="uppersixth" class="classValue">Upper sixth</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down select-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                
+                <!-- Search and Filter Bar -->
+                <div class="search-filter" aria-labelledby="search-filter-heading">
+                    <h2 id="search-filter-heading" class="sr-only">Search and Filter Subjects</h2>
+                    
+                    <div class="search-container" role="search">
+                        <label for="subjectSearch" class="sr-only">Search subjects</label>
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <input 
+                            type="text" 
+                            id="subjectSearch" 
+                            placeholder="Search subjects..." 
+                            autocomplete="off"
+                            aria-label="Search subjects"
+                        >
+                    </div>
+                    
+                    <div class="filter-tags" role="tablist" aria-label="Filter subjects by category">
+                        <button type="button" class="tag active" data-filter="all" role="tab" aria-selected="true" aria-controls="all-subjects">All</button>
+                        <button type="button" class="tag" data-filter="sciences" role="tab" aria-selected="false" aria-controls="science-subjects">Sciences</button>
+                        <button type="button" class="tag" data-filter="languages" role="tab" aria-selected="false" aria-controls="language-subjects">Languages</button>
+                        <button type="button" class="tag" data-filter="humanities" role="tab" aria-selected="false" aria-controls="humanities-subjects">Humanities</button>
+                        <button type="button" class="tag" data-filter="commercial" role="tab" aria-selected="false" aria-controls="commercial-subjects">Commercial</button>
+                    </div>
+                </div>
+                
+                <!-- Main Subject Grid Container -->
+                <section class="subject-container" aria-label="Available subjects">
+                    <div class="subject-card" data-category="sciences" data-progress="75">
+                        <div class="subject-icon" aria-hidden="true">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <div class="subject-content">
+                            <h2>Mathematics</h2>
+                            <div class="progress-container">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress" style="width: 75%"></div>
+                                </div>
+                                <div class="progress-text">
+                                    <span class="completion">75% Complete</span>
+                                    <span class="time-spent">12 hours spent</span>
+                                </div>
+                            </div>
+                            <button 
+                                type="button" 
+                                class="action-button primary-action"
+                                onclick="openPdfInNewTab('../Notes/Maths-Form-1-Notes.pdf')" 
+                                aria-label="Start solving Mathematics lessons">
+                                <i class="fa-solid fa-play" aria-hidden="true"></i> Start solving
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="subject-card" data-category="sciences" data-progress="45">
+                        <div class="subject-icon" aria-hidden="true">
+                            <i class="fa-solid fa-atom"></i>
+                        </div>
+                        <div class="subject-content">
+                            <h2>Physics</h2>
+                            <div class="progress-container">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress" style="width: 45%"></div>
+                                </div>
+                                <div class="progress-text">
+                                    <span class="completion">45% Complete</span>
+                                    <span class="time-spent">8 hours spent</span>
+                                </div>
+                            </div>
+                            <button 
+                                type="button" 
+                                class="action-button secondary-action"
+                                onclick="openUrlInNewTab('https://app.easyelimu.com/lessons/6-high-school/6-form-1/51-physics')" 
+                                aria-label="Start Physics lessons">
+                                <i class="fa-solid fa-play" aria-hidden="true"></i> Get Started
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="subject-card" data-category="sciences" data-progress="60">
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-flask"></i>
+                        </div>
+                        <div class="subject-content">
+                            <h2>Chemistry</h2>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 60%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>60% Complete</span>
+                                <span>10 hours spent</span>
+                            </div>
+                            <button onclick="openPdfInNewTab('../Notes/FORM-1-CHEMISTRY-NOTES.pdf')" type="button">
+                                <i class="fa-solid fa-flask-vial"></i> Go to lab
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="subject-card" data-category="sciences" data-progress="30">
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-dna"></i>
+                        </div>
+                        <div class="subject-content">
+                            <h2>Biology</h2>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 30%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>30% Complete</span>
+                                <span>5 hours spent</span>
+                            </div>
+                            <button onclick="openPdfInNewTab('../Notes/Biology-Form-1-Notes.pdf')" type="button">
+                                <i class="fa-solid fa-microscope"></i> Go to lab
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="subject-card" data-category="commercial" data-progress="15">
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div class="subject-content">
+                            <h2>Economics</h2>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 15%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>15% Complete</span>
+                                <span>2 hours spent</span>
+                            </div>
+                            <button type="button">
+                                <i class="fa-solid fa-play"></i> Get started
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="subject-card" data-category="sciences" data-progress="90">
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div class="subject-content">
+                            <h2>Computer Science</h2>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>90% Complete</span>
+                                <span>18 hours spent</span>
+                            </div>
+                            <button onclick="openPdfInNewTab('../Notes/Form-1-Computer-Notes.pdf')" type="button">
+                                <i class="fa-solid fa-code"></i> Get started
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="subject-card" data-category="commercial" data-progress="0">
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+                        <div class="subject-content">
+                            <h2>Commerce</h2>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 0%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>Not started</span>
+                                <span>0 hours spent</span>
+                            </div>
+                            <button type="button">
+                                <i class="fa-solid fa-play"></i> Get started
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="subject-card" data-category="humanities" data-progress="0">
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-landmark"></i>
+                        </div>
+                        <div class="subject-content">
+                            <h2>History</h2>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 0%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>Not started</span>
+                                <span>0 hours spent</span>
+                            </div>
+                            <button type="button">
+                                <i class="fa-solid fa-play"></i> Get started
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="subject-card" data-category="languages" data-progress="20">
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <div class="subject-content">
+                            <h2>Literature</h2>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 20%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>20% Complete</span>
+                                <span>3 hours spent</span>
+                            </div>
+                            <button type="button">
+                                <i class="fa-solid fa-play"></i> Get started
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="subject-card" data-category="humanities" data-progress="0">
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div class="subject-content">
+                            <h2>Citizenship</h2>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 0%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>Not started</span>
+                                <span>0 hours spent</span>
+                            </div>
+                            <button type="button">
+                                <i class="fa-solid fa-play"></i> Get started
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="subject-card" data-category="languages" data-progress="55">
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-language"></i>
+                        </div>
+                        <div class="subject-content">
+                            <h2>English</h2>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 55%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>55% Complete</span>
+                                <span>9 hours spent</span>
+                            </div>
+                            <button onclick="openUrlInNewTab('https://app.easyelimu.com/lessons/6-high-school/6-form-1/49-english')" type="button">
+                                <i class="fa-solid fa-play"></i> Get started
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="subject-card" data-category="humanities" data-progress="0">
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <div class="subject-content">
+                            <h2>Home Economics</h2>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 0%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>Not started</span>
+                                <span>0 hours spent</span>
+                            </div>
+                            <button type="button">
+                                <i class="fa-solid fa-play"></i> Get started
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="subject-card" data-category="humanities" data-progress="5">
+                        <div class="subject-icon">
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </div>
+                        <div class="subject-content">
+                            <h2>Geography</h2>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 5%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>5% Complete</span>
+                                <span>1 hour spent</span>
+                            </div>
+                            <button type="button">
+                                <i class="fa-solid fa-play"></i> Get started
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                
+                <div id="no-results" class="no-results-message" style="display: none;" aria-live="polite">
+                    <i class="fa-solid fa-search" aria-hidden="true"></i>
+                    <p>No subjects match your search criteria</p>
+                    <button id="clearFilters" type="button" class="action-button reset-action">Clear filters</button>
+                </div>
+            </main>
+        </section>
+    </section>
+    <footer class="bg-teal-600 text-orange-100 py-4 text-center mt-16 shadow-inner">
+        &copy; 2025 Learning Lab. All rights reserved.
+    </footer>
+       <script>
+        const frenchArray = [
+            "6eme",
+            "5eme",
+            "4eme",
+            "3eme",
+            "2eme",
+            "1ere",
+            "Terminal"
+        ];
+        const englishArray = [
+            "Form 1",
+            "Form 2",
+            "Form 3",
+            "Form 4",
+            "Form 5",
+            "Lower Sixth",
+            "Upper Sixth"
+        ];
+        const subjects = [
+            "Mathematics",
+            "English",
+            "Chemistry",
+            "Biology",
+            "Economics",
+            "Additional Mathematics",
+            "French",
+            "Computer Science",
+            "Commerce",
+            "Literature",
+            "History",
+            "Geography",
+            "Religion Studies",
+            "Citizenship",
+            "Home Economics",
+        ];
+            
+        function openPdfInNewTab(pdfUrl) {
+            const link = document.createElement('a');
+            link.href = pdfUrl;
+            link.target = '_blank';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+        
+        function openUrlInNewTab(url) {
+            window.open(url, '_blank');
+        }
+        
+        // Filter subjects by category
+        const filterTags = document.querySelectorAll('.filter-tags .tag');
+        const subjectCards = document.querySelectorAll('.subject-card');
+        const noResults = document.getElementById('no-results');
+        
+        filterTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                // Remove active class from all tags and update ARIA attributes
+                filterTags.forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                
+                // Add active class to clicked tag and update ARIA
+                tag.classList.add('active');
+                tag.setAttribute('aria-selected', 'true');
+                
+                const filterValue = tag.getAttribute('data-filter');
+                let visibleCount = 0;
+                
+                subjectCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'flex';
+                        visibleCount++;
+                        // Add animation class with a slight delay for a staggered effect
+                        setTimeout(() => {
+                            card.classList.add('fade-in');
+                        }, 50);
+                    } else {
+                        card.style.display = 'none';
+                        card.classList.remove('fade-in');
+                    }
+                });
+                
+                // Show "no results" message if no subjects match
+                if (visibleCount === 0) {
+                    noResults.style.display = 'flex';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            });
+        });
+        
+        // Clear filters button
+        const clearFiltersBtn = document.getElementById('clearFilters');
+        if (clearFiltersBtn) {
+            clearFiltersBtn.addEventListener('click', () => {
+                // Set the "All" filter as active
+                filterTags.forEach(tag => {
+                    tag.classList.remove('active');
+                    if (tag.getAttribute('data-filter') === 'all') {
+                        tag.classList.add('active');
+                    }
+                });
+                
+                // Show all subject cards
+                subjectCards.forEach(card => {
+                    card.style.display = 'flex';
+                    setTimeout(() => {
+                        card.classList.add('fade-in');
+                    }, 50);
+                });
+                
+                // Hide the no results message
+                noResults.style.display = 'none';
+                
+                // Clear the search input
+                document.getElementById('subjectSearch').value = '';
+            });
+        }
+        
+        // Search functionality with debounce
+        const searchInput = document.getElementById('subjectSearch');
+        
+        // Debounce function to improve performance
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+        
+        if (searchInput) {
+            // Use debounce to avoid excessive filtering during fast typing
+            const performSearch = debounce(() => {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                let visibleCount = 0;
+                
+                // Get current active category filter
+                const activeFilter = document.querySelector('.filter-tags .tag.active')?.getAttribute('data-filter') || 'all';
+                
+                subjectCards.forEach(card => {
+                    const subjectName = card.querySelector('h2').textContent.toLowerCase();
+                    const category = card.getAttribute('data-category');
+                    
+                    // Show card if it matches both search term and active category filter
+                    const matchesSearch = subjectName.includes(searchTerm);
+                    const matchesCategory = (activeFilter === 'all' || category === activeFilter);
+                    
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = 'flex';
+                        visibleCount++;
+                        // Add animation
+                        setTimeout(() => card.classList.add('fade-in'), 50);
+                    } else {
+                        card.style.display = 'none';
+                        card.classList.remove('fade-in');
+                    }
+                });
+                
+                // Show "no results" message if no subjects match
+                if (visibleCount === 0) {
+                    noResults.style.display = 'flex';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            }, 300); // 300ms debounce time
+            
+            searchInput.addEventListener('input', performSearch);
+        }
+        
+        /**
+         * Class and curriculum selection handler
+         * Updates available classes based on selected curriculum
+         * Manages content visibility based on selections
+         */
+        const classSelect = document.querySelector(".section-class");
+        const curriculumSelect = document.querySelector(".select");
+        let selectedClass = "";
+        let selectedSection = "";
+        
+        // Create a state object for selected filters
+        const courseState = {
+            curriculum: null,
+            classLevel: null,
+            category: 'all',
+            searchTerm: '',
+        };
+        
+        /**
+         * Updates subject display based on current filter state
+         * Shows appropriate subjects based on curriculum, class level, and search/category filters
+         */
+        function updateSubjectDisplay() {
+            // Add animation to show selection change
+            subjectCards.forEach(card => {
+                card.classList.add('pulse-animation');
+                setTimeout(() => {
+                    card.classList.remove('pulse-animation');
+                }, 500);
+            });
+            
+            // In a real application, this would fetch appropriate subjects 
+            // based on the selected curriculum and class level
+            
+            // For demonstration, we'll just log the state
+            console.log("Current course filters:", courseState);
+        }
+        
+        // Class level change handler
+        if (classSelect) {
+            classSelect.addEventListener("change", (event) => {
+                const classValue = event.target.value;
+                selectedClass = classValue;
+                courseState.classLevel = classValue;
+                
+                // Update UI to show selected class level is active
+                classSelect.parentNode.classList.add('selection-active');
+                
+                updateSubjectDisplay();
+            });
+        }
+        
+        // Curriculum change handler
+        if (curriculumSelect) {
+            curriculumSelect.addEventListener("change", (event) => {
+                selectedSection = event.target.value;
+                courseState.curriculum = selectedSection;
+                
+                // Update UI to show selected curriculum is active
+                curriculumSelect.parentNode.classList.add('selection-active');
+                
+                // Update class level options based on selected curriculum
+                if (selectedSection === "francaise") {
+                    updateClassOptions(frenchArray);
+                } else if (selectedSection === "anglosaxon") {
+                    updateClassOptions(englishArray);
+                }
+                
+                updateSubjectDisplay();
+            });
+        }
+        
+        /**
+         * Updates class options based on selected curriculum
+         * @param {Array} classArray - Array of class names for the selected curriculum
+         */
+        function updateClassOptions(classArray) {
+            const allClasses = document.getElementsByClassName("classValue");
+            if (!allClasses || allClasses.length === 0) return;
+            
+            // Reset class selection when curriculum changes
+            classSelect.value = 'select';
+            courseState.classLevel = null;
+            
+            // Update class options with animation
+            Array.from(allClasses).forEach((option, i) => {
+                if (i < classArray.length) {
+                    // Create normalized value (lowercase, no spaces)
+                    const value = classArray[i].toLowerCase().replace(/\s+/g, '');
+                    
+                    // Apply changes with a slight delay for animation effect
+                    setTimeout(() => {
+                        option.value = value;
+                        option.textContent = classArray[i];
+                        option.classList.add('option-updated');
+                        
+                        // Remove animation class after animation completes
+                        setTimeout(() => option.classList.remove('option-updated'), 500);
+                    }, i * 50);
+                }
+            });
+        }
+        
+        /**
+         * Initialize the course section with animations and interactivity
+         * - Sets up initial animations for a polished appearance
+         * - Adds hover effects and interaction states
+         * - Sets up accessibility features
+         * - Initializes progress indicators
+         */
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add initial animations to subject cards with staggered timing
+            subjectCards.forEach((card, index) => {
+                // Use staggered delays for a cascade effect
+                setTimeout(() => {
+                    card.classList.add('fade-in');
+                    
+                    // Initialize progress bar with animation
+                    const progress = card.getAttribute('data-progress');
+                    const progressBar = card.querySelector('.progress');
+                    
+                    if (progressBar) {
+                        // Start with zero width then animate to actual width
+                        progressBar.style.width = '0%';
+                        setTimeout(() => {
+                            progressBar.style.transition = 'width 1s ease-out';
+                            progressBar.style.width = `${progress}%`;
+                        }, 100);
+                    }
+                }, 100 + (index * 100)); // Stagger by 100ms per card
+            });
+            
+            // Add interactive effects for better UX
+            subjectCards.forEach(card => {
+                // Hover effects
+                card.addEventListener('mouseenter', () => {
+                    card.classList.add('hover-effect');
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.classList.remove('hover-effect');
+                });
+                
+                // Clicking anywhere on card (except button) focuses the card
+                card.addEventListener('click', (event) => {
+                    // Don't trigger if clicking on button
+                    if (!event.target.closest('button')) {
+                        card.classList.add('card-focus');
+                        setTimeout(() => {
+                            card.classList.remove('card-focus');
+                        }, 300);
+                    }
+                });
+                
+                // Add touch support for mobile
+                card.addEventListener('touchstart', () => {
+                    card.classList.add('touch-active');
+                });
+                
+                card.addEventListener('touchend', () => {
+                    card.classList.remove('touch-active');
+                    setTimeout(() => {
+                        card.classList.remove('touch-active');
+                    }, 300);
+                });
+            });
+            
+            // Add class to body when page is fully loaded for transitions
+            document.body.classList.add('content-loaded');
+            
+            // Set up select wrappers to highlight on focus
+            const selectWrappers = document.querySelectorAll('.select-wrapper');
+            selectWrappers.forEach(wrapper => {
+                const select = wrapper.querySelector('select');
+                if (select) {
+                    select.addEventListener('focus', () => {
+                        wrapper.classList.add('focused');
+                    });
+                    
+                    select.addEventListener('blur', () => {
+                        wrapper.classList.remove('focused');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <script src="https://kit.fontawesome.com/a14b3ad818.js" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="../styles/index.css">
 </head>
 
-<body class="">
+<body class="dashboard-body">
     <section class="dashboard">
         <main>
             <div class="logo">
@@ -18,39 +17,39 @@
             </div>
             <nav class="sidebar">
                 <ul>
-                    <li>
-                        <a href="../pages/dashboard.html">Dashboard</a>
+                    <li class="active">
+                        <a href="../pages/dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="../pages/mentors.html">Mentors</a>
+                        <a href="../pages/courses.html"><i class="fa-solid fa-book"></i> My Courses</a>
                     </li>
                     <li>
-                        <a href="../pages/students.html">Students</a>
+                        <a href="../pages/mentors.html"><i class="fa-solid fa-chalkboard-user"></i> Mentors</a>
                     </li>
                     <li>
-                        <a href="../pages/analytics.html">Analytics</a>
+                        <a href="../pages/students.html"><i class="fa-solid fa-user-graduate"></i> Students</a>
                     </li>
                     <li>
-                        <a href="../pages/courses.html">Courses</a>
+                        <a href="../pages/analytics.html"><i class="fa-solid fa-chart-line"></i> Analytics</a>
                     </li>
                     <li>
-                        <a href="../pages/forum.html">Forum</a>
+                        <a href="../pages/forum.html"><i class="fa-solid fa-comments"></i> Forum</a>
                     </li>
                     <li>
-                        <div>
+                        <div class="upgrade-section">
                             <h1>Upgrade to Pro</h1>
                             <p>Get access to additional features</p>
                             <button>Upgrade</button>
                         </div>
                     </li>
                     <li>
-                        <a href="../pages/about.html">Settings</a>
+                        <a href="../pages/about.html"><i class="fa-solid fa-gear"></i> Settings</a>
                     </li>
                     <li>
-                        <a href="../pages/about.html">Help</a>
+                        <a href="../pages/about.html"><i class="fa-solid fa-circle-question"></i> Help</a>
                     </li>
                     <li>
-                        <a href="../pages/about.html">Logout</a>
+                        <a href="../pages/about.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                     </li>
                 </ul>
             </nav>
@@ -58,29 +57,195 @@
         <section class="dashboard-content">
             <nav>
                 <h1>
-                    Dashboard
+                    My Learning Dashboard
                 </h1>
                 <ul>
                     <li class="search-bar">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="search " placeholder="Search...">
+                        <input class="search" type="search" placeholder="Search courses...">
                     </li>
-                    <li>
+                    <li class="notification">
                         <i class="fa-solid fa-bell"></i>
                         <span class="notification-count">3</span>
                     </li>
-                    <li>
-                        <i class="fa-solid fa-user"></i>
+                    <li class="user-profile">
+                        <img src="../images/logo.png" alt="Profile" class="profile-image">
                         <span class="username">John Doe</span>
                     </li>
                 </ul>
             </nav>
-            <main>
+            <main class="dashboard-main">
+                <div class="dashboard-overview">
+                    <h2>Overview</h2>
+                    <div class="stats-cards">
+                        <div class="stat-card">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <div class="stat-info">
+                                <h3>5</h3>
+                                <p>Active Courses</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fa-solid fa-certificate"></i>
+                            <div class="stat-info">
+                                <h3>3</h3>
+                                <p>Certifications</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fa-solid fa-clock"></i>
+                            <div class="stat-info">
+                                <h3>28h</h3>
+                                <p>Learning Hours</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fa-solid fa-trophy"></i>
+                            <div class="stat-info">
+                                <h3>12</h3>
+                                <p>Achievements</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="user-courses">
+                    <div class="section-header">
+                        <h2>My Courses</h2>
+                        <a href="../pages/courses.html" class="view-all">View All</a>
+                    </div>
+                    <div class="course-list">
+                        <div class="course-item">
+                            <div class="course-image">
+                                <img src="../images/hero.jpg" alt="Web Development">
+                                <span class="progress-indicator" style="width: 75%"></span>
+                            </div>
+                            <div class="course-details">
+                                <h3>Web Development Fundamentals</h3>
+                                <p class="instructor">By Dr. Smith Johnson</p>
+                                <div class="course-meta">
+                                    <span class="progress">75% Complete</span>
+                                    <span class="duration"><i class="fa-solid fa-clock"></i> 4h remaining</span>
+                                </div>
+                                <a href="#" class="continue-btn">Continue Learning</a>
+                            </div>
+                        </div>
+
+                        <div class="course-item">
+                            <div class="course-image">
+                                <img src="../images/logo.png" alt="Data Science">
+                                <span class="progress-indicator" style="width: 45%"></span>
+                            </div>
+                            <div class="course-details">
+                                <h3>Introduction to Data Science</h3>
+                                <p class="instructor">By Prof. Jane Williams</p>
+                                <div class="course-meta">
+                                    <span class="progress">45% Complete</span>
+                                    <span class="duration"><i class="fa-solid fa-clock"></i> 8h remaining</span>
+                                </div>
+                                <a href="#" class="continue-btn">Continue Learning</a>
+                            </div>
+                        </div>
+
+                        <div class="course-item">
+                            <div class="course-image">
+                                <img src="../images/student-book.svg" alt="Mobile App Development">
+                                <span class="progress-indicator" style="width: 20%"></span>
+                            </div>
+                            <div class="course-details">
+                                <h3>Mobile App Development</h3>
+                                <p class="instructor">By Alex Chen</p>
+                                <div class="course-meta">
+                                    <span class="progress">20% Complete</span>
+                                    <span class="duration"><i class="fa-solid fa-clock"></i> 12h remaining</span>
+                                </div>
+                                <a href="#" class="continue-btn">Continue Learning</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="user-activities">
+                    <div class="section-header">
+                        <h2>Recent Activities</h2>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon completed">
+                                <i class="fa-solid fa-check-circle"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h3>Completed Assignment: CSS Layouts</h3>
+                                <p>Web Development Fundamentals</p>
+                                <span class="timestamp">Today, 10:30 AM</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon watched">
+                                <i class="fa-solid fa-play-circle"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h3>Watched Lecture: Python Data Structures</h3>
+                                <p>Introduction to Data Science</p>
+                                <span class="timestamp">Yesterday, 3:15 PM</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon comment">
+                                <i class="fa-solid fa-comment"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h3>Posted on Forum: API Integration</h3>
+                                <p>Mobile App Development</p>
+                                <span class="timestamp">Aug 5, 2025, 11:42 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommended-courses">
+                    <div class="section-header">
+                        <h2>Recommended For You</h2>
+                        <a href="#" class="view-all">Explore More</a>
+                    </div>
+                    <div class="recommended-grid">
+                        <div class="recommended-course">
+                            <img src="../images/hero.jpg" alt="Course">
+                            <h3>Advanced JavaScript Concepts</h3>
+                            <p>Take your JavaScript skills to the next level</p>
+                            <div class="course-stats">
+                                <span><i class="fa-solid fa-star"></i> 4.8</span>
+                                <span><i class="fa-solid fa-user"></i> 2.3k</span>
+                                <span><i class="fa-solid fa-clock"></i> 18h</span>
+                            </div>
+                        </div>
+                        <div class="recommended-course">
+                            <img src="../images/logo.png" alt="Course">
+                            <h3>Machine Learning Basics</h3>
+                            <p>Learn the fundamentals of ML algorithms</p>
+                            <div class="course-stats">
+                                <span><i class="fa-solid fa-star"></i> 4.9</span>
+                                <span><i class="fa-solid fa-user"></i> 3.1k</span>
+                                <span><i class="fa-solid fa-clock"></i> 24h</span>
+                            </div>
+                        </div>
+                        <div class="recommended-course">
+                            <img src="../images/student-book.svg" alt="Course">
+                            <h3>UI/UX Design Principles</h3>
+                            <p>Create beautiful and functional interfaces</p>
+                            <div class="course-stats">
+                                <span><i class="fa-solid fa-star"></i> 4.7</span>
+                                <span><i class="fa-solid fa-user"></i> 1.8k</span>
+                                <span><i class="fa-solid fa-clock"></i> 15h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
         </section>
     </section>
-    <footer class="bg-teal-600 text-orange-100 py-4 text-center mt-16 shadow-inner">
+    <footer class="bg-teal-600 text-orange-100 py-4 text-center shadow-inner">
         &copy; 2025 Learning Lab. All rights reserved.
     </footer>
 </body>
