@@ -231,30 +231,30 @@ h1 {
   /* Content */
   /* Responsive */
 }
-.dashboard main {
+.dashboard > main {
   width: 250px;
   background: linear-gradient(135deg, #008b8b 0%, #006666 100%);
   position: relative;
   transition: all 0.3s ease;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
-.dashboard main .logo {
+.dashboard > main .logo {
   padding: 1.5rem 0;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-.dashboard main .logo img {
+.dashboard > main .logo img {
   max-width: 65%;
   height: auto;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
   transition: all 0.3s ease;
 }
-.dashboard main .logo img:hover {
+.dashboard > main .logo img:hover {
   transform: scale(1.05);
   filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.2));
 }
-.dashboard main nav.sidebar {
+.dashboard > main nav.sidebar {
   background-color: transparent;
   padding: 1.5rem 1rem;
   height: calc(100vh - 6rem);
@@ -262,37 +262,37 @@ h1 {
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
 }
-.dashboard main nav.sidebar::-webkit-scrollbar {
+.dashboard > main nav.sidebar::-webkit-scrollbar {
   width: 4px;
 }
-.dashboard main nav.sidebar::-webkit-scrollbar-thumb {
+.dashboard > main nav.sidebar::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 4px;
 }
-.dashboard main nav.sidebar::-webkit-scrollbar-thumb:hover {
+.dashboard > main nav.sidebar::-webkit-scrollbar-thumb:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
-.dashboard main nav.sidebar ul {
+.dashboard > main nav.sidebar ul {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
-.dashboard main nav.sidebar ul li {
+.dashboard > main nav.sidebar ul li {
   border-radius: 10px;
   transition: all 0.3s ease;
   position: relative;
 }
-.dashboard main nav.sidebar ul li.active a {
+.dashboard > main nav.sidebar ul li.active a {
   background-color: rgba(255, 255, 255, 0.2);
   color: #ffffff;
   font-weight: 600;
   transform: translateX(5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.dashboard main nav.sidebar ul li.active a i {
+.dashboard > main nav.sidebar ul li.active a i {
   color: #ffffff;
 }
-.dashboard main nav.sidebar ul li.active a::before {
+.dashboard > main nav.sidebar ul li.active a::before {
   content: "";
   position: absolute;
   left: -16px;
@@ -303,11 +303,11 @@ h1 {
   background-color: #ffffff;
   border-radius: 0 4px 4px 0;
 }
-.dashboard main nav.sidebar ul li:hover a {
+.dashboard > main nav.sidebar ul li:hover a {
   background-color: rgba(255, 255, 255, 0.15);
   transform: translateX(5px);
 }
-.dashboard main nav.sidebar ul li a {
+.dashboard > main nav.sidebar ul li a {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -320,22 +320,22 @@ h1 {
   font-size: 0.95rem;
   letter-spacing: 0.2px;
 }
-.dashboard main nav.sidebar ul li a i {
+.dashboard > main nav.sidebar ul li a i {
   width: 24px;
   text-align: center;
   font-size: 18px;
   color: rgba(255, 255, 255, 0.75);
   transition: all 0.3s ease;
 }
-.dashboard main nav.sidebar ul li a:hover {
+.dashboard > main nav.sidebar ul li a:hover {
   color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.dashboard main nav.sidebar ul li a:hover i {
+.dashboard > main nav.sidebar ul li a:hover i {
   transform: translateX(2px);
   color: #ffffff;
 }
-.dashboard main nav.sidebar ul li .upgrade-section {
+.dashboard > main nav.sidebar ul li .upgrade-section {
   margin: 20px 0;
   padding: 20px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
@@ -348,7 +348,7 @@ h1 {
   position: relative;
   overflow: hidden;
 }
-.dashboard main nav.sidebar ul li .upgrade-section::before {
+.dashboard > main nav.sidebar ul li .upgrade-section::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -359,21 +359,21 @@ h1 {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.dashboard main nav.sidebar ul li .upgrade-section:hover::before {
+.dashboard > main nav.sidebar ul li .upgrade-section:hover::before {
   opacity: 1;
 }
-.dashboard main nav.sidebar ul li .upgrade-section h1 {
+.dashboard > main nav.sidebar ul li .upgrade-section h1 {
   font-size: 16px;
   color: #ffffff;
   font-weight: 700;
   margin-bottom: 8px;
 }
-.dashboard main nav.sidebar ul li .upgrade-section p {
+.dashboard > main nav.sidebar ul li .upgrade-section p {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 16px;
 }
-.dashboard main nav.sidebar ul li .upgrade-section button {
+.dashboard > main nav.sidebar ul li .upgrade-section button {
   padding: 8px 20px;
   background: #ffffff;
   color: #008080;
@@ -385,7 +385,7 @@ h1 {
   transition: all 0.25s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
-.dashboard main nav.sidebar ul li .upgrade-section button:hover {
+.dashboard > main nav.sidebar ul li .upgrade-section button:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -763,7 +763,7 @@ h1 {
   }
 }
 @media (max-width: 768px) {
-  .dashboard main {
+  .dashboard > main {
     width: 220px;
   }
   .dashboard .dashboard-content {

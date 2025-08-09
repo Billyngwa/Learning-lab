@@ -7,7 +7,7 @@
     overflow: hidden;
 
     /* Sidebar */
-    main {
+    > main {
         width: 250px;
         background: linear-gradient(135deg, #008b8b 0%, #006666 100%);
         position: relative;
@@ -531,7 +531,7 @@
         .stats-cards { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
     }
     @media (max-width: 768px) {
-        main { width: 220px; }
+        & > main { width: 220px; }
         .dashboard-content { padding: 16px; }
         .dashboard-content nav ul { gap: 12px; }
         .dashboard-content .search-bar .search { width: 180px; }
