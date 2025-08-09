@@ -49,7 +49,7 @@
                         <a href="../pages/about.html"><i class="fa-solid fa-circle-question"></i> Help</a>
                     </li>
                     <li>
-                        <a href="../pages/about.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                        <a href="#" id="logout-button"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                     </li>
                 </ul>
             </nav>
@@ -74,180 +74,187 @@
                     </li>
                 </ul>
             </nav>
-            <main class="dashboard-main">
-                <div class="dashboard-overview">
-                    <h2>Overview</h2>
-                    <div class="stats-cards">
-                        <div class="stat-card">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            <div class="stat-info">
-                                <h3>5</h3>
-                                <p>Active Courses</p>
-                            </div>
-                        </div>
-                        <div class="stat-card">
-                            <i class="fa-solid fa-certificate"></i>
-                            <div class="stat-info">
-                                <h3>3</h3>
-                                <p>Certifications</p>
-                            </div>
-                        </div>
-                        <div class="stat-card">
-                            <i class="fa-solid fa-clock"></i>
-                            <div class="stat-info">
-                                <h3>28h</h3>
-                                <p>Learning Hours</p>
-                            </div>
-                        </div>
-                        <div class="stat-card">
-                            <i class="fa-solid fa-trophy"></i>
-                            <div class="stat-info">
-                                <h3>12</h3>
-                                <p>Achievements</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+           <section class="students-in-database">
 
-                <div class="user-courses">
-                    <div class="section-header">
-                        <h2>My Courses</h2>
-                        <a href="../pages/courses.html" class="view-all">View All</a>
-                    </div>
-                    <div class="course-list">
-                        <div class="course-item">
-                            <div class="course-image">
-                                <img src="../images/hero.jpg" alt="Web Development">
-                                <span class="progress-indicator" style="width: 75%"></span>
-                            </div>
-                            <div class="course-details">
-                                <h3>Web Development Fundamentals</h3>
-                                <p class="instructor">By Dr. Smith Johnson</p>
-                                <div class="course-meta">
-                                    <span class="progress">75% Complete</span>
-                                    <span class="duration"><i class="fa-solid fa-clock"></i> 4h remaining</span>
-                                </div>
-                                <a href="#" class="continue-btn">Continue Learning</a>
-                            </div>
-                        </div>
-
-                        <div class="course-item">
-                            <div class="course-image">
-                                <img src="../images/logo.png" alt="Data Science">
-                                <span class="progress-indicator" style="width: 45%"></span>
-                            </div>
-                            <div class="course-details">
-                                <h3>Introduction to Data Science</h3>
-                                <p class="instructor">By Prof. Jane Williams</p>
-                                <div class="course-meta">
-                                    <span class="progress">45% Complete</span>
-                                    <span class="duration"><i class="fa-solid fa-clock"></i> 8h remaining</span>
-                                </div>
-                                <a href="#" class="continue-btn">Continue Learning</a>
-                            </div>
-                        </div>
-
-                        <div class="course-item">
-                            <div class="course-image">
-                                <img src="../images/student-book.svg" alt="Mobile App Development">
-                                <span class="progress-indicator" style="width: 20%"></span>
-                            </div>
-                            <div class="course-details">
-                                <h3>Mobile App Development</h3>
-                                <p class="instructor">By Alex Chen</p>
-                                <div class="course-meta">
-                                    <span class="progress">20% Complete</span>
-                                    <span class="duration"><i class="fa-solid fa-clock"></i> 12h remaining</span>
-                                </div>
-                                <a href="#" class="continue-btn">Continue Learning</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="user-activities">
-                    <div class="section-header">
-                        <h2>Recent Activities</h2>
-                        <a href="#" class="view-all">View All</a>
-                    </div>
-                    <div class="activity-list">
-                        <div class="activity-item">
-                            <div class="activity-icon completed">
-                                <i class="fa-solid fa-check-circle"></i>
-                            </div>
-                            <div class="activity-details">
-                                <h3>Completed Assignment: CSS Layouts</h3>
-                                <p>Web Development Fundamentals</p>
-                                <span class="timestamp">Today, 10:30 AM</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon watched">
-                                <i class="fa-solid fa-play-circle"></i>
-                            </div>
-                            <div class="activity-details">
-                                <h3>Watched Lecture: Python Data Structures</h3>
-                                <p>Introduction to Data Science</p>
-                                <span class="timestamp">Yesterday, 3:15 PM</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon comment">
-                                <i class="fa-solid fa-comment"></i>
-                            </div>
-                            <div class="activity-details">
-                                <h3>Posted on Forum: API Integration</h3>
-                                <p>Mobile App Development</p>
-                                <span class="timestamp">Aug 5, 2025, 11:42 AM</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="recommended-courses">
-                    <div class="section-header">
-                        <h2>Recommended For You</h2>
-                        <a href="#" class="view-all">Explore More</a>
-                    </div>
-                    <div class="recommended-grid">
-                        <div class="recommended-course">
-                            <img src="../images/hero.jpg" alt="Course">
-                            <h3>Advanced JavaScript Concepts</h3>
-                            <p>Take your JavaScript skills to the next level</p>
-                            <div class="course-stats">
-                                <span><i class="fa-solid fa-star"></i> 4.8</span>
-                                <span><i class="fa-solid fa-user"></i> 2.3k</span>
-                                <span><i class="fa-solid fa-clock"></i> 18h</span>
-                            </div>
-                        </div>
-                        <div class="recommended-course">
-                            <img src="../images/logo.png" alt="Course">
-                            <h3>Machine Learning Basics</h3>
-                            <p>Learn the fundamentals of ML algorithms</p>
-                            <div class="course-stats">
-                                <span><i class="fa-solid fa-star"></i> 4.9</span>
-                                <span><i class="fa-solid fa-user"></i> 3.1k</span>
-                                <span><i class="fa-solid fa-clock"></i> 24h</span>
-                            </div>
-                        </div>
-                        <div class="recommended-course">
-                            <img src="../images/student-book.svg" alt="Course">
-                            <h3>UI/UX Design Principles</h3>
-                            <p>Create beautiful and functional interfaces</p>
-                            <div class="course-stats">
-                                <span><i class="fa-solid fa-star"></i> 4.7</span>
-                                <span><i class="fa-solid fa-user"></i> 1.8k</span>
-                                <span><i class="fa-solid fa-clock"></i> 15h</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
+           </section>
         </section>
     </section>
     <footer class="bg-teal-600 text-orange-100 py-4 text-center shadow-inner">
         &copy; 2025 Learning Lab. All rights reserved.
     </footer>
+
+    <script type="module">
+        import { auth, db } from "../js/firebase-config.js";
+        import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+        import { collection, getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        import { updateUserProfile, handleLogout } from "../js/dashboard.js";
+        
+        // DOM Elements
+        const studentsContainer = document.querySelector('.students-in-database');
+        
+        // Check authentication and admin status
+        document.addEventListener('DOMContentLoaded', () => {
+            onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    // User is signed in, update profile info
+                    updateUserProfile(user);
+                    
+                    // Load students data
+                    loadStudents();
+                } else {
+                    // No user is signed in, redirect to login
+                    window.location.href = './login.html';
+                }
+            });
+            
+            // Set up logout button
+            const logoutButton = document.getElementById('logout-button');
+            logoutButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                handleLogout();
+            });
+        });
+        
+        // Function to load all students from Firestore
+        async function loadStudents() {
+            try {
+                // Show loading state
+                studentsContainer.innerHTML = '<div class="loading">Loading students data...</div>';
+                
+                // Get all users from the "users" collection
+                const querySnapshot = await getDocs(collection(db, "users"));
+                
+                // Check if we have any students
+                if (querySnapshot.empty) {
+                    studentsContainer.innerHTML = '<div class="no-data">No students found in the database.</div>';
+                    return;
+                }
+                
+                // Create HTML for students table
+                let tableHTML = `
+                    <div class="students-controls">
+                        <h2>All Students</h2>
+                        <div class="controls">
+                            <button class="add-student">Add New Student</button>
+                            <div class="filter-sort">
+                                <select id="sort-students">
+                                    <option value="name-asc">Name (A-Z)</option>
+                                    <option value="name-desc">Name (Z-A)</option>
+                                    <option value="date-asc">Registration Date (Oldest)</option>
+                                    <option value="date-desc">Registration Date (Newest)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="students-table-container">
+                        <table class="students-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Registration Date</th>
+                                    <th>Active Courses</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                `;
+                
+                // Add each student to the table
+                querySnapshot.forEach((doc) => {
+                    const student = doc.data();
+                    const date = student.createdAt ? new Date(student.createdAt.seconds * 1000).toLocaleDateString() : 'N/A';
+                    const coursesCount = student.activeCourses ? student.activeCourses.length : 0;
+                    
+                    tableHTML += `
+                        <tr data-id="${doc.id}">
+                            <td data-label="Name">${student.fullName || 'No Name'}</td>
+                            <td data-label="Email">${student.email || 'No Email'}</td>
+                            <td data-label="Phone">${student.phone || 'No Phone'}</td>
+                            <td data-label="Registration Date">${date}</td>
+                            <td data-label="Active Courses">${coursesCount}</td>
+                            <td class="actions" data-label="Actions">
+                                <button class="view-student" title="View Details"><i class="fas fa-eye"></i></button>
+                                <button class="edit-student" title="Edit Student"><i class="fas fa-edit"></i></button>
+                                <button class="delete-student" title="Delete Student"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    `;
+                });
+                
+                // Close the table
+                tableHTML += `
+                            </tbody>
+                        </table>
+                    </div>
+                `;
+                
+                // Add the table to the container
+                studentsContainer.innerHTML = tableHTML;
+                
+                // Add event listeners for the action buttons
+                setupStudentActions();
+                
+            } catch (error) {
+                console.error("Error loading students:", error);
+                studentsContainer.innerHTML = `<div class="error">Error loading students: ${error.message}</div>`;
+            }
+        }
+        
+        // Set up event listeners for student actions
+        function setupStudentActions() {
+            // View student details
+            document.querySelectorAll('.view-student').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const studentId = e.target.closest('tr').dataset.id;
+                    console.log("View student:", studentId);
+                    // Implement view student functionality
+                });
+            });
+            
+            // Edit student
+            document.querySelectorAll('.edit-student').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const studentId = e.target.closest('tr').dataset.id;
+                    console.log("Edit student:", studentId);
+                    // Implement edit student functionality
+                });
+            });
+            
+            // Delete student
+            document.querySelectorAll('.delete-student').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const studentId = e.target.closest('tr').dataset.id;
+                    const studentRow = e.target.closest('tr');
+                    const studentName = studentRow.querySelector('td:first-child').textContent;
+                    
+                    if (confirm(`Are you sure you want to delete student: ${studentName}?`)) {
+                        console.log("Delete student:", studentId);
+                        // Implement delete student functionality
+                    }
+                });
+            });
+            
+            // Add new student button
+            const addButton = document.querySelector('.add-student');
+            if (addButton) {
+                addButton.addEventListener('click', () => {
+                    console.log("Add new student");
+                    // Implement add new student functionality
+                });
+            }
+            
+            // Sort functionality
+            const sortSelect = document.getElementById('sort-students');
+            if (sortSelect) {
+                sortSelect.addEventListener('change', () => {
+                    console.log("Sort students by:", sortSelect.value);
+                    // Implement sort functionality
+                });
+            }
+        }
+    </script>
 </body>
 
 </html>

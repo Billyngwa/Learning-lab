@@ -64,7 +64,11 @@
         </div>
 
     </form>
-    <script>
+    <script type="module">
+        import { auth, db } from "../js/firebase-config.js";
+        import { createUserWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+        import { doc, setDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        
         const firstName = document.querySelector("#firstName");
         const lastName = document.querySelector("#lastName");
         const email = document.querySelector("#email");
@@ -113,10 +117,47 @@
                 alert("Passwords do not match!");
                 return;
             }
-            alert("Passwords match!"); // For demonstration purposes
-
-            alert("Registration successful!");
-            location.href = "./login.html";
+            
+            // Create user with Firebase Authentication
+            createUserWithEmailAndPassword(auth, email.value, password.value)
+                .then((userCredential) => {
+                    // User successfully created
+                    const user = userCredential.user;
+                    console.log("User registered successfully:", user);
+                    
+                    // Update user profile with additional information
+                    updateProfile(user, {
+                        displayName: `${firstName.value} ${lastName.value}`
+                    }).then(() => {
+                        console.log("Profile updated successfully");
+                        
+                        // Store additional user data in Firestore
+                        const userDocRef = doc(db, "users", user.uid);
+                        return setDoc(userDocRef, {
+                            firstName: firstName.value,
+                            lastName: lastName.value,
+                            fullName: `${firstName.value} ${lastName.value}`,
+                            email: email.value,
+                            phone: phone.value,
+                            createdAt: new Date(),
+                            // Default stats for a new user
+                            activeCourses: [],
+                            certifications: [],
+                            learningHours: 0,
+                            achievements: []
+                        });
+                    }).then(() => {
+                        console.log("User data stored in Firestore");
+                        alert("Registration successful!");
+                        location.href = "./login.html";
+                    });
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    console.error("Registration error:", errorCode, errorMessage);
+                    alert("Registration failed: " + errorMessage);
+                });
         });
         console.log("data: ", userData);
 

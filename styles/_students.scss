@@ -1,0 +1,244 @@
+// Students page styles
+// Color variables
+$teal-primary: #008080;
+$teal-light: #e0f2f1;
+$teal-dark: #006666;
+$teal-accent: #4db6ac;
+$teal-hover: #b2dfdb;
+
+// Students table container
+.students-in-database {
+    padding: 0.8rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    background: linear-gradient(to bottom, #ffffff, #f9ffff); // Subtle gradient
+    
+    .loading, .error, .no-data {
+        padding: 0.75rem;
+        text-align: center;
+        margin: 1.5rem auto;
+        font-size: 0.9rem;
+        
+        &.loading {
+            color: $teal-dark;
+        }
+        
+        &.error {
+            color: #d9534f;
+            border: 1px solid #d9534f;
+            border-radius: 4px;
+        }
+        
+        &.no-data {
+            color: #666;
+            font-style: italic;
+        }
+    }
+}
+
+// Students controls section
+.students-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid $teal-light;
+    
+    h2 {
+        font-size: 1rem; // Smaller heading
+        font-weight: 600;
+        color: $teal-primary; // Changed to primary teal
+        margin: 0; // Remove default margin
+    }
+    
+    .controls {
+        display: flex;
+        gap: 0.5rem; // Reduced gap
+        
+        .add-student {
+            padding: 0.3rem 0.6rem; // Smaller padding
+            background-color: $teal-primary;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.75rem; // Smaller font
+            
+            &:hover {
+                background-color: $teal-dark;
+            }
+        }
+        
+        .filter-sort {
+            select {
+                padding: 0.3rem; // Smaller padding
+                border: 1px solid $teal-light;
+                border-radius: 4px;
+                background-color: #fff;
+                cursor: pointer;
+                font-size: 0.75rem; // Smaller font
+                
+                &:focus {
+                    outline: none;
+                    border-color: $teal-accent;
+                }
+            }
+        }
+    }
+}
+
+// Students table
+.students-table-container {
+    overflow-x: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 128, 128, 0.08); // Subtle teal shadow
+    
+    .students-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+        
+        thead {
+            background-color: $teal-primary;
+            
+            th {
+                padding: 0.6rem;
+                text-align: left;
+                font-weight: 500;
+                color: white;
+                border-bottom: 2px solid $teal-dark;
+                font-size: 0.75rem; // Reduced font size
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+        }
+        
+        tbody {
+            tr {
+                border-bottom: 1px solid $teal-light;
+                transition: background-color 0.2s ease;
+
+                &:hover {
+                    background-color: $teal-hover;
+                }
+                
+                td {
+                    padding: 0.5rem 0.6rem; // Reduced padding
+                    color: #444;
+                    font-size: 0.8rem; // Reduced font size
+                    
+                    &.actions {
+                        white-space: nowrap;
+                        display: flex;
+                        gap: 0.15rem; // Reduced gap between buttons
+                        justify-content: flex-start;
+                        align-items: center;
+                        
+                        button {
+                            background: none;
+                            border: none;
+                            padding: 0.2rem; // Reduced padding
+                            cursor: pointer;
+                            height: 24px; // Smaller height
+                            width: 24px; // Smaller width
+                            border-radius: 3px; // Slightly smaller border radius
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            
+                            &.view-student {
+                                color: white;
+                                background-color: $teal-primary;
+                            }
+                            
+                            &.edit-student {
+                                color: white;
+                                background-color: $teal-accent;
+                            }
+                            
+                            &.delete-student {
+                                color: white;
+                                background-color: #e57373;
+                            }
+                            
+                            &:hover {
+                                opacity: 0.85;
+                                transform: translateY(-1px);
+                            }
+                            
+                            i {
+                                font-size: 0.75rem; // Smaller icons
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive styles
+@media screen and (max-width: 768px) {
+    .students-controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        
+        h2 {
+            margin-bottom: 0.25rem;
+        }
+    }
+    
+    .students-table-container {
+        .students-table {
+            thead {
+                display: none;
+            }
+            
+            tbody {
+                tr {
+                    display: block;
+                    margin-bottom: 0.75rem;
+                    border: 1px solid $teal-light;
+                    border-radius: 4px;
+                    background-color: #fff;
+                    
+                    &:hover {
+                        box-shadow: 0 2px 8px rgba(0, 128, 128, 0.1);
+                    }
+                    
+                    td {
+                        display: block;
+                        text-align: right;
+                        padding: 0.5rem 0.75rem;
+                        border-bottom: 1px solid $teal-light;
+                        font-size: 0.85rem;
+                        
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                        
+                        &:before {
+                            content: attr(data-label);
+                            float: left;
+                            font-weight: 600;
+                            color: $teal-dark;
+                        }
+                        
+                        &.actions {
+                            display: flex;
+                            justify-content: flex-end;
+                            
+                            &:before {
+                                margin-right: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

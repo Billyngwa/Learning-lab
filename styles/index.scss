@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Tailwind will be applied in a separate step */
+/* The directives below will be processed by the Tailwind CLI */
+/* @tailwind base; */
+/* @tailwind components; */
+/* @tailwind utilities; */
 
 *{
     margin: 0;
@@ -9,10 +11,11 @@
     box-sizing: border-box;
     font-family: 'Google Sans Code', monospace;
 }
-@import "../styles/home.scss";
-@import "../styles/register.scss";
-@import "../styles/dashboard.scss";
-@import "../styles/help.scss";
-@import "../styles/about.scss";
-@import "../styles/services.scss";
-@import "../styles/courses.scss"
+@import "../styles/_home";
+@import "../styles/_register.scss";
+@import "../styles/_dashboard.scss";
+@import "../styles/_help.scss";
+@import "../styles/_about.scss";
+@import "../styles/_services.scss";
+@import "../styles/_courses.scss";
+@import "../styles/_students.scss";

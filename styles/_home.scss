@@ -1,8 +1,5 @@
-* {
-    font-size: 40px;
-    font-family: "Google Sans Code", monospace;
-
-}
+/* Apply home-specific styles without overriding the global font size */
+/* Removing the font-size: 40px that was breaking the layout */
 
 a {
     text-decoration: none;

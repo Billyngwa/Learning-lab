@@ -36,7 +36,11 @@
             </div>
         </section>
     </header>
-
+<script type="module">
+  // Import Firebase from our centralized configuration file
+  import { app, analytics } from "./js/firebase-config.js";
+  console.log("Firebase initialized on homepage");
+</script>
 </body>
 
 </html>
